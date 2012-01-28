@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>My Custom Skeleton</title>
+	<meta name="description" content="I'm trying something new out, so don't get excited.">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <body class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="no-js ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <body> <!--<![endif]-->
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+	<header>
+		<h1 class="remove-bottom">Mark's Custom Skeleton</h1>
+	</header>
+
+	<div class="container">
+		
+		<section>
+		<div class="row">
+			<h1 class="sectionheader">Grid System</h1>
+			<div class="col4">
+				<h2>Default Grid</h2>
+				<p>The site adheres to a 960px grid containing 16 columns - The main structure is pulled from the <a href="http://getskeleton.com/" target="_blank">Skeleton</a> 
+				framework. There is a 20px margin between each column with a 10px gutter on the left and right sides of the site.</p>
+			</div>
+			<div class="col8">
+				<h3>Example of grid markup</h3>
+<pre>
+&lt;div class="col8"&gt;
+   ...
+&lt;/div&gt;
+&lt;div class="col4"&gt;
+   ...
+&lt;/div&gt;
+</pre>
+			</div>
+		</div>
+		<div class="gridsample">
+			<div class="row" title="12 column layout">
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+				<div class="col1">1</div>
+			</div>
+			<div class="row" title="6 column layout">
+				<div class="col2">2</div>
+				<div class="col2">2</div>
+				<div class="col2">2</div>
+				<div class="col2">2</div>
+				<div class="col2">2</div>
+				<div class="col2">2</div>
+			</div>
+			<div class="row" title="4 column layout">
+				<div class="col3">3</div>
+				<div class="col3">3</div>
+				<div class="col3">3</div>
+				<div class="col3">3</div>
+			</div>
+			<div class="row" title="Half and half layout">
+				<div class="col6">6</div>
+				<div class="col6">6</div>
+			</div>
+			<div class="row" title="Two thirds and One third column layout">
+				<div class="col4">4</div>
+				<div class="col8">8</div>
+			</div>
+			<div class="row" title="Single column layout">
+				<div class="col12">12</div>
+			</div>
+			  
+			<!-- Sweet nested cols cleared with a clearfix class -->
+			<div class="row" title="Nested column layout - 2 columns nested inside another larger one">
+				<div class="col8 clearfix">
+					<!-- In nested cols give the first col a class of first
+					and the second a class of last -->
+					<div class="col5 first">5</div>
+					<div class="col3 last">3</div>
+				</div>
+			</div>
+		</div><!-- gridsample -->
+		</section>
+		<hr/>
+		
+		<section>
+			<h1 class="sectionheader">Typography</h1>
+			<div class="row">
+				<div class="col4">
+					<h2>Headings</h2>
+					<p>A standard typographic hierarchy for structuring your webpages.</p>
+				</div>
+				<div class="col8">
+					<div class="col4 first">
+						<h1>h1. Heading 1</h1>
+						<h2>h2. Heading 2</h2>
+						<h3>h3. Heading 3</h3>
+						<h4>h4. Heading 4</h4>
+						<h5>h5. Heading 5</h5>
+						<h6>h6. Heading 6</h6>
+					</div>
+					<div class="col4 last">
+						<h3>Example paragraph</h3>
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col4">
+					<h2>Misc. elements</h2>
+					<p>Using emphasis, addresses, & abbreviations</p>
+					<p>
+						<code>&lt;strong&gt;</code>
+						<code>&lt;em&gt;</code>
+						<code>&lt;address&gt;</code>
+						<code>&lt;abbr&gt;</code>
+					</p>
+				</div>
+				<div class="col8">
+					<h3>When to use</h3>
+					<p>Emphasis tags (<code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>) should be used to indicate additional importance or emphasis of a word or phrase relative to its surrounding copy. Use <code>&lt;strong&gt;</code> for importance and <code>&lt;em&gt;</code> for <em>stress</em> emphasis.</p>
+					<h3>Emphasis in a paragraph</h3>
+					<p><a href="#">Fusce dapibus</a>, <strong>tellus ac cursus commodo</strong>, <em>tortor mauris condimentum nibh</em>, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.</p>
+					<p><strong>Note:</strong> It's still okay to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags in HTML5 and they don't have to be styled bold and italic, respectively (although if there is a more semantic element, use it). <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance, while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+					<h3>Addresses</h3>
+					<p>The <code>&lt;address&gt;</code> element is used for contact information for its nearest ancestor, or the entire body of work. Here are two examples of how it could be used:</p>
+
+					<div class="grid4">
+						<address>
+		        	    	<strong>Herbalife iChange</strong><br />
+		        	    	800 West Olympic Blvd., Suite 406<br />
+		        	    	Los Angeles, CA 90015<br />
+		        	    	<abbr title="Phone">P:</abbr> (310) 410-9600
+		        	  	</address>
+					</div>
+		        	<div class="grid4">
+		        	  	<address>
+		        	    	<strong>Full Name</strong><br />
+		        	    	<a mailto="#">first.last@gmail.com</a>
+		          		</address>
+		        	</div>
+				
+					<div class="grid8">
+						<p><strong>Note:</strong> Each line in an <code>&lt;address&gt;</code> must end with a line-break (<code>&lt;br /&gt;</code>) or be wrapped in a block-level tag (e.g., <code>&lt;p&gt;</code>) to properly structure the content.</p>
+						<h3>Abbreviations</h3>
+						<p>For abbreviations and acronyms, use the <code>&lt;abbr&gt;</code> tag (<code>&lt;acronym&gt;</code> is deprecated in <abbr title="HyperText Markup Langugage 5">HTML5</abbr>). Put the shorthand form within the tag and set a title for the complete name.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col4">
+					<h2>Blockquotes</h2>
+					<p>
+					<code>&lt;blockquote&gt;</code>
+					<code>&lt;p&gt;</code>
+					<code>&lt;cite&gt;</code>
+					</p>
+				</div>
+				<div class="col8">
+					<h3>How to quote</h3>
+					<p>To include a blockquote, wrap <code>&lt;blockquote&gt;</code> around <code>&lt;p&gt;</code> and <code>&lt;cite&gt;</code> tags. Use the <code>&lt;cite&gt;</code> element to cite your source and you'll get an em dash <code>&amp;mdash;</code> before it.</p>
+					<blockquote>
+					 	<p>This is a blockquote style example. It stands out, but is awesome</p>
+					 	<cite>Dave Gamache, Skeleton Creator</cite>
+					</blockquote>
+<pre>
+&lt;blockquote&gt;
+  &lt;p&gt;This is a blockquote style example. It stands out, but is awesome&lt;/p&gt;
+  &lt;cite&gt;Dave Gamache, Skeleton Creator&lt;/cite&gt;
+&lt;/blockquote&gt;
+</pre>
+				</div>
+			</div>
+
+			<div class="row">
+				<h2>Lists</h2>
+				<div class="col3">
+					<h4>Unordered <code>&lt;ul&gt;</code></h4>
+					<ul>
+						<li>Lorem ipsum dolor sit</li>
+						<li>Consectetur adipiscing</li>
+						<li>Integer molestie lorem ata</li>
+						<li>Facilisis in pretium nislt</li>
+						<li>Nulla volutpat aliquam
+							<ul>
+			            		<li>Phasellus iaculis</li>
+			            		<li>Purus sodales</li>
+			            		<li>Vestibulum laoreet</li>
+			            		<li>Ac tristique libero</li>
+			        		</ul>
+			        	</li>
+			      	</ul>
+			    </div>
+			    <div class="col3">
+			    	<h4>Styled <code>&lt;ul.disc&gt;</code></h4>
+			    	<ul class="disc">
+				        <li>Lorem ipsum dolor sit amet</li>
+				        <li>Consectetur adipiscing elit</li>
+				        <li>Integer molestie lorem at</li>
+				        <li>Facilisis in pretium nisl aliquet</li>
+				        <li>Nulla volutpat aliquam velit
+				        	<ul class="square">
+				            	<li>Phasellus iaculis neque</li>
+				            	<li>Purus sodales ultricies</li>
+				            	<li>Vestibulum laoreet</li>
+				            	<li>Ac tristique libero volutpat</li>
+				          	</ul>
+				        </li>
+			    	</ul>
+			    </div>
+			    <div class="col3">
+					<h4>Ordered <code>&lt;ol&gt;</code></h4>
+			    	<ol>
+				        <li>Lorem ipsum dolor sit</li>
+				        <li>Consectetur adipiscing</li>
+				        <li>Integer molestie lorem at</li>
+				        <li>Facilisis in pretium nisl</li>
+				        <li>Nulla volutpat aliquam</li>
+				        <li>Faucibus porta lacus vel</li>
+				        <li>Aenean sit amet erat nunc</li>
+				        <li>Eget porttitor lorem</li>
+					</ol>
+			    </div>
+			    <div class="col3">
+			    	<h4>Description <code>dl</code></h4>
+					<dl>
+				        <dt>Description lists</dt>
+				        <dd>A description list is perfect for defining terms.</dd>
+				        <dt>Euismod</dt>
+				        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+				        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+				        <dt>Malesuada porta</dt>
+				        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+		<hr/>
+
+		<section>
+			<h1 class="sectionheader">Tables</h1>
+			<div class="row">
+				<div class="col4">
+					<h2>Building tables</h2>
+				    <p>
+				        <code>&lt;table&gt;</code>
+				        <code>&lt;thead&gt;</code>
+				        <code>&lt;tbody&gt;</code>
+				        <code>&lt;tr&gt;</code>
+				        <code>&lt;th&gt;</code>
+				        <code>&lt;td&gt;</code>
+				        <code>&lt;colspan&gt;</code>
+				        <code>&lt;caption&gt;</code>
+				    </p>
+				    <p>Tables are great&mdash;for a lot of things. Great tables, however, need a bit of markup love to be useful, scalable, and readable (at the code level). Here are a few tips to help.</p>
+				    <p>Always wrap your column headers in a <code>&lt;thead&gt;</code> such that hierarchy is <code>&lt;thead&gt;</code> > <code>&lt;tr&gt;</code> > <code>&lt;th&gt;</code>.</p>
+				    <p>Similar to the column headers, all your table’s body content should be wrapped in a <code>&lt;tbody&gt;</code> so your hierarchy is <code>&lt;tbody&gt;</code> > <code>&lt;tr&gt;</code> > <code>&lt;td&gt;</code>.</p>
+			    </div>
+			    <div class="col8">
+					<h3>Example: Default table styles</h3>
+					<p>All tables will be automatically styled with only the essential borders to ensure readability and maintain structure. No need to add extra classes or attributes.</p>
+					<table>
+						<thead>
+						<tr>
+				            <th>#</th>
+				            <th>First Name</th>
+				            <th>Last Name</th>
+				            <th>Language</th>
+						</tr>
+						</thead>
+						<tbody>
+			        	<tr>
+				            <td>1</td>
+				            <td>Some</td>
+				            <td>One</td>
+				            <td>English</td>
+						</tr>
+						<tr>
+				            <td>2</td>
+				            <td>Joe</td>
+				            <td>Sixpack</td>
+				            <td>English</td>
+						</tr>
+						<tr>
+				            <td>3</td>
+				            <td>Ben</td>
+				            <td>Dover</td>
+				            <td>Code</td>
+						</tr>
+						</tbody>
+					</table>
+<pre>
+&lt;table&gt;
+  ...
+&lt;/table&gt;</pre>
+			    </div>
+			</div>
+		</section>
+		<hr/>
+
+		<section>
+		<h1 class="sectionheader">Buttons</h1>
+		<div class="row">
+			<div class="col4">
+				<h2>Default buttons</h2>
+				<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
+			</div>
+			<div class="col8">
+				<h3>Example buttons</h3>
+				<p>Button styles can be applied to anything with the <code>.btn</code> applied. Typically you’ll want to apply these to only <code>&lt;a&gt;</code>, 
+				<code>&lt;button&gt;</code>, and select <code>&lt;input&gt;</code> elements. Here’s how it looks:</p>
+				<!-- Just add .button to an anchor -->
+				<a href="#" class="button">Click Me</a>
+
+				<!-- Also works on plain button elements -->
+				<button>Click Me</button>
+
+				<!-- To take up full-width of a container? -->
+				<a href="#" class="full-width button">Click Me</a>
+			</div>
+		</div>
+		</section>
+		<hr/>
+
+		<section>
+		<h1 class="sectionheader">Tabs</h1>
+		<div class="row">
+			<div class="col4">
+				<h2>Default tabs</h2>
+				<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
+				<p>NOTE: jQuery that fires the change is in tabs.js</p>
+			</div>
+			<div class="col8">
+				<ul class="tabs">
+					<li><a class="active" href="#simple">Simple</a></li>
+					<li><a href="#lightweight">Lightweight</a></li>
+					<li><a href="#mobileFriendly">Mobile</a></li>
+				</ul>
+				<ul class="tabs-content">
+					<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
+					<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
+					<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
+				</ul>
+				<h3>Example code</h3>
+<pre>
+&lt;ul class="tabs"&gt;
+	&lt;li&gt;&lt;a class="active" href="#simple">Simple&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#lightweight">Lightweight&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#mobileFriendly">Mobile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="tabs-content"&gt;
+	&lt;li class="active" id="simple"&gt;Tabs are simple.&lt;/li&gt;
+	&lt;li id="lightweight"&gt;Tabs are cross-browser and light.&lt;/li&gt;
+	&lt;li id="mobileFriendly"&gt;Tabs are mobile friendly.&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			</div>
+		</div>
+		</section>
+		<hr/>
+
+		<section>
+		<h1 class="sectionheader">Forms</h1>
+		<div class="row">
+			<div class="col4">
+				<h2>Default forms</h2>
+				<p>Styles provided for text inputs, select lists, textareas, radio buttons and checkboxes, and buttons.</p>
+			</div>
+			<div class="col8">
+				<h3>Example</h3>
+				<form>
+					<label for="regularInput">Regular Input</label>
+					<input type="text" id="regularInput" />
+					<label for="regularTextarea">Regular Textarea</label>
+					<textarea id="regularTextarea"></textarea>
+					<label for="selectList">Select List</label>
+					<select id="selectList">
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+						<option value="Option 3">Option 3</option>
+						<option value="Option 4">Option 4</option>
+					</select>
+					<fieldset>
+						<legend>Checkboxes</legend>
+						<label for="regularCheckbox">
+							<input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+							<span>Regular Checkbox</span>
+						</label>
+						<label for="secondRegularCheckbox">
+							<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
+							<span>Regular Checkbox</span>
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Radio Buttons</legend>
+						<label for="regularRadio">
+							<input type="radio" name="radios" id="regularRadio" value="radio 1" />
+							<span>Regular Radio</span>
+						</label>
+						<label for="secondRegularRadio">
+							<input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
+							<span>Regular Radio</span>
+						</label>
+					</fieldset>
+					<button type="submit">Submit Form</button>
+				</form>
+			</div>
+		</div>
+		</section>
+
+
+	</div><!-- container -->
+	<footer>
+		This concludes the basic framework.
+	</footer>
+
+
+
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="js/tabs.js"></script>
+
+</body>
+</html>
