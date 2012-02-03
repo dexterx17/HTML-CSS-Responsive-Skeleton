@@ -1,7 +1,7 @@
 /* Repurposed Skeleton V1.1 by Dave Gamache at www.getskeleton.com */
 .pagination {
-  height: 36px;
-  margin: 18px 0;
+  height: 42px;
+  margin: 21px 0;
 }
 .pagination ul {
   display: inline-block;
@@ -24,7 +24,7 @@
 .pagination a {
   float: left;
   padding: 0 14px;
-  line-height: 34px;
+  line-height: 40px;
   text-decoration: none;
   border: 1px solid #ddd;
   border-left-width: 0;
@@ -34,12 +34,12 @@
   background-color: #f5f5f5;
 }
 .pagination .active a {
-  color: #999999;
+  color: #666666;
   cursor: default;
 }
 .pagination .disabled a,
 .pagination .disabled a:hover {
-  color: #999999;
+  color: #666666;
   background-color: transparent;
   cursor: default;
 }
@@ -62,7 +62,7 @@
 }
 .pager {
   margin-left: 0;
-  margin-bottom: 18px;
+  margin-bottom: 21px;
   list-style: none;
   text-align: center;
   zoom: 1;
@@ -307,9 +307,11 @@ td {
 /* #Basic Styles
 ================================================== */
 body {
-  background: #fff;
-  font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #444;
+  background: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
 
@@ -319,11 +321,11 @@ header {
   background: #333333 url('../images/black_denim.jpg') repeat;
   width: 100%;
   text-align: center;
-  color: #FFF !important;
+  color: #ffffff !important;
   padding: 30px 0;
 }
 header h1 {
-  color: #FFF;
+  color: #ffffff;
   text-shadow: 0 0 2px #000;
 }
 footer {
@@ -331,7 +333,7 @@ footer {
   width: 100%;
   height: 70px;
   text-align: center;
-  color: #FFF !important;
+  color: #ffffff !important;
   padding: 10px 0;
 }
 /* #Typography
@@ -343,7 +345,7 @@ h4,
 h5,
 h6 {
   color: #333333;
-  font-family: "Tahoma", "HelveticaNeue", "Helvetica", Arial, sans-serif;
+  font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 h1 a,
@@ -371,7 +373,7 @@ h3 {
   font-size: 28px;
   line-height: 34px;
   margin-bottom: 8px;
-  color: #555555;
+  color: #666666;
 }
 h4 {
   font-size: 21px;
@@ -385,16 +387,16 @@ h5 {
 h6 {
   font-size: 14px;
   line-height: 21px;
-  color: #999999;
+  color: #666666;
   text-transform: uppercase;
 }
 .subheader {
-  color: #555555;
+  color: #666666;
 }
 .sectionheader {
   margin: 1.5em 0 1em;
   line-height: 1.2;
-  border-bottom: 1px dotted #CCC;
+  border-bottom: 1px dotted #cccccc;
   padding-bottom: 10px;
 }
 p {
@@ -406,7 +408,7 @@ p img {
 p.lead {
   font-size: 21px;
   line-height: 27px;
-  color: #555555;
+  color: #666666;
 }
 em {
   font-style: italic;
@@ -422,19 +424,20 @@ small {
 blockquote,
 blockquote p {
   font-size: 17px;
-  line-height: 24px;
-  color: #999999;
+  line-height: 21px;
+  color: #666666;
   font-style: italic;
 }
 blockquote {
   margin: 0 0 20px;
   padding: 9px 20px 0 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #cccccc;
 }
 blockquote cite {
   display: block;
-  font-size: 12px;
-  color: #999999;
+  font-size: 13px;
+  color: #666666;
+  font-style: normal;
 }
 blockquote cite:before {
   content: "\2014 \0020";
@@ -442,14 +445,7 @@ blockquote cite:before {
 blockquote cite a,
 blockquote cite a:visited,
 blockquote cite a:visited {
-  color: #999999;
-}
-hr {
-  border: solid #ddd;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 10px 0 30px;
-  height: 0;
+  color: #cccccc;
 }
 code,
 pre {
@@ -466,13 +462,13 @@ code {
   padding: 1px 3px;
 }
 pre {
-  background-color: #f5f5f5;
+  background-color: #efefef;
   display: block;
   padding: 8.5px;
   margin: 0 0 18px;
   line-height: 18px;
   font-size: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -489,10 +485,13 @@ pre.normaltxt {
   font-size: 100%;
   border: none;
   display: inline;
-  font-family: Trebuchet, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.muted {
-  color: #999999;
+address {
+  display: block;
+  margin-bottom: 21px;
+  line-height: 21px;
+  font-style: normal;
 }
 /* #Links
 ================================================== */
@@ -625,7 +624,7 @@ input[type="button"] {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  color: #444;
+  color: #666666;
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
@@ -634,14 +633,14 @@ input[type="button"] {
   cursor: pointer;
   margin-bottom: 20px;
   line-height: 21px;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a.button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-  color: #222;
+  color: #222222;
   background: #ddd;
   /* Old browsers */
 
@@ -727,21 +726,21 @@ ul.tabs li a {
   height: 29px;
   padding: 0px 20px;
   line-height: 30px;
-  border: solid 1px #ddd;
+  border: solid 1px #cccccc;
   border-width: 1px 1px 0 0;
   margin: 0;
-  background: #f5f5f5;
+  background: #efefef;
   font-size: 13px;
 }
 ul.tabs li a.active {
-  background: #fff;
+  background: #ffffff;
   height: 30px;
   position: relative;
   top: -4px;
   padding-top: 4px;
   border-left-width: 1px;
   margin: 0 0 0 -1px;
-  color: #111;
+  color: #222222;
   -moz-border-radius-topleft: 2px;
   -webkit-border-top-left-radius: 2px;
   border-top-left-radius: 2px;
@@ -808,14 +807,14 @@ select {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #777;
+  font: 14px "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #666666;
   margin: 0;
   width: 210px;
   max-width: 100%;
   display: block;
   margin-bottom: 20px;
-  background: #fff;
+  background: #ffffff;
 }
 select {
   padding: 0;
@@ -825,7 +824,7 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   border: 1px solid #aaa;
-  color: #444;
+  color: #333333;
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
@@ -840,7 +839,7 @@ label,
 legend {
   display: block;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 14px;
 }
 select {
   width: 220px;
@@ -851,8 +850,8 @@ input[type="checkbox"] {
 label span,
 legend span {
   font-weight: normal;
-  font-size: 13px;
-  color: #444;
+  font-size: 14px;
+  color: #666666;
 }
 /* #Tables
 ================================================== */
@@ -870,11 +869,11 @@ table h6 {
   padding: 0;
 }
 th {
-  border-bottom: 2px solid #DDD;
+  border-bottom: 2px solid #cccccc;
   font-weight: bold;
 }
 td {
-  border-bottom: 1px dotted #CCC;
+  border-bottom: 1px dotted #cccccc;
 }
 td:first-child,
 th:first-child {
@@ -891,6 +890,13 @@ caption {
 }
 /* #Misc
 ================================================== */
+hr {
+  border: dotted #cccccc;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}
 .remove-bottom {
   margin-bottom: 0 !important;
 }
@@ -899,6 +905,9 @@ caption {
 }
 .add-bottom {
   margin-bottom: 20px !important;
+}
+.muted {
+  color: #cccccc;
 }
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
@@ -965,7 +974,7 @@ caption {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000000 !important;
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
