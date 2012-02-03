@@ -45,7 +45,9 @@
 
 	<div class="container">
 		
-		<section>
+		<!-- Grid
+		================================================== -->
+		<section id="grid">
 		<div class="row">
 			<h1 class="sectionheader">Grid System</h1>
 			<div class="col4">
@@ -124,7 +126,9 @@
 		</section>
 		<hr/>
 		
-		<section>
+		<!-- Headings
+		================================================== -->
+		<section id="typography">
 			<h1 class="sectionheader">Typography</h1>
 			<div class="row">
 				<div class="col4">
@@ -146,7 +150,9 @@
 					</div>
 				</div>
 			</div>
-
+			
+			<!-- Misc. Elements
+			================================================== -->
 			<div class="row">
 				<div class="col4">
 					<h2>Misc. elements</h2>
@@ -214,7 +220,9 @@
 </pre>
 				</div>
 			</div>
-
+			
+			<!-- Lists
+			================================================== -->
 			<div class="row">
 				<h2>Lists</h2>
 				<div class="col3">
@@ -279,12 +287,14 @@
 			</div>
 		</section>
 		<hr/>
-
-		<section>
+		
+		<!-- Tables
+		================================================== -->
+		<section id="tables">
 			<h1 class="sectionheader">Tables</h1>
 			<div class="row">
 				<div class="col4">
-					<h2>Building tables</h2>
+					<h3>Building tables</h3>
 				    <p>
 				        <code>&lt;table&gt;</code>
 				        <code>&lt;thead&gt;</code>
@@ -300,7 +310,7 @@
 				    <p>Similar to the column headers, all your table’s body content should be wrapped in a <code>&lt;tbody&gt;</code> so your hierarchy is <code>&lt;tbody&gt;</code> > <code>&lt;tr&gt;</code> > <code>&lt;td&gt;</code>.</p>
 			    </div>
 			    <div class="col8">
-					<h3>Example: Default table styles</h3>
+					<h2>Example: Default table styles</h2>
 					<p>All tables will be automatically styled with only the essential borders to ensure readability and maintain structure. No need to add extra classes or attributes.</p>
 					<table>
 						<thead>
@@ -341,15 +351,17 @@
 		</section>
 		<hr/>
 
-		<section>
+		<!-- Buttons
+		================================================== -->
+		<section id="buttons">
 		<h1 class="sectionheader">Buttons</h1>
 		<div class="row">
 			<div class="col4">
-				<h2>Default buttons</h2>
+				<h3>Default buttons</h3>
 				<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
 			</div>
 			<div class="col8">
-				<h3>Example buttons</h3>
+				<h2>Example buttons</h2>
 				<p>Button styles can be applied to anything with the <code>.btn</code> applied. Typically you’ll want to apply these to only <code>&lt;a&gt;</code>, 
 				<code>&lt;button&gt;</code>, and select <code>&lt;input&gt;</code> elements. Here’s how it looks:</p>
 				<!-- Just add .button to an anchor -->
@@ -364,12 +376,115 @@
 		</div>
 		</section>
 		<hr/>
+		
+		<!-- Tooltips
+	    ================================================== -->
+	    <section id="tooltips">
+	    <h1 class="sectionheader">Tooltips</h1>
+		<div class="row">
+			<div class="col4">
+				<h3>About Tooltips</h3>
+				<p>Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, uss css3 for animations, and data-attributes for local title storage.</p>
+			</div>
+			<div class="col8">
+				<h2>Example use of Tooltips</h2>
+				<p>Hover over the links below to see tooltips:</p>
+				<p class="muted">First, I believe that this nation should commit itself to <a href="#tooltips" rel='tooltip' title="first tooltip">achieving the goal</a>, 
+				before this decade is out, of landing a man on <a href="#tooltips" rel='tooltip' title='Another tooltip'>the moon</a> and returning him safely to the 
+				earth. No single space project in this period will be more impressive to mankind, or more important for the 
+				<a href="#tooltips" rel='tooltip' title='Another one here too'>long-range</a> exploration of space; and none will be so difficult or 
+				<a href="#tooltips" rel='tooltip' title='The last tip!'>expensive</a> to accomplish.</p>
+				<hr>
+				
+				<h2>Using tooltip.js</h2>
+				<p>Trigger the tooltip via javascript:</p>
+				<pre class="prettyprint linenums">$('#example').tooltip(options)</pre>
+				
+				<h3>Options</h3>
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th style="width: 100px;">Name</th>
+							<th style="width: 100px;">type</th>
+							<th style="width: 50px;">default</th>
+							<th>description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>animation</td>
+							<td>boolean</td>
+							<td>true</td>
+							<td>apply a css fade transition to the tooltip</td>
+						</tr>
+						<tr>
+							<td>placement</td>
+							<td>string</td>
+							<td>'top'</td>
+							<td>how to position the tooltip - top | bottom | left | right</td>
+						</tr>
+						<tr>
+							<td>selector</td>
+							<td>string</td>
+							<td>false</td>
+							<td>If a selector is provided, tooltip objects will be delegated to the specified targets.</td>
+						</tr>
+						<tr>
+							<td>title</td>
+							<td>string | function</td>
+							<td>''</td>
+							<td>default title value if `title` tag isn't present</td>
+						</tr>
+						<tr>
+							<td>trigger</td>
+							<td>string</td>
+							<td>'hover'</td>
+							<td>how tooltip is triggered - hover | focus | manual</td>
+						</tr>
+						<tr>
+							<td>delay</td>
+							<td>number | object</td>
+							<td>0</td>
+							<td>
+								<p>delay showing and hiding the tooltip (ms)</p>
+								<p>If a number is supplied, delay is applied to both hide/show</p>
+								<p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="alert alert-info">
+					<strong>Heads up!</strong>
+					Options for individual tooltips can alternatively be specified through the use of data attributes.
+				</div>
+		
+				<h3>Markup</h3>
+				<p>For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a selector option.</p>
+				
+				<h3>Methods</h3>
+				<h4>$().tooltip(options)</h4>
+				<p>Attaches a tooltip handler to an element collection.</p>
+				<h4>.tooltip('show')</h4>
+				<p>Reveals an elements tooltip.<br />
+				<code>$('#element').tooltip('show')</code></p>
+				<h4>.tooltip('hide')</h4>
+				<p>Hides an elements tooltip.<br />
+				<code>$('#element').tooltip('hide')</code></p>
+				<h4>.tooltip('toggle')</h4>
+				<p>Toggles an elements tooltip.<br />
+				<code>$('#element').tooltip('toggle')</Code></p>
+			</div>
+		</div>
+	    </section>
+	    <hr />
 
-		<section>
+		<!-- Tabs
+		================================================== -->
+		<section id="tabs">
 		<h1 class="sectionheader">Tabs</h1>
 		<div class="row">
 			<div class="col4">
-				<h2>Default tabs</h2>
+				<h3>Default tabs</h3>
 				<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
 				<p>NOTE: jQuery that fires the change is in tabs.js</p>
 			</div>
@@ -384,17 +499,17 @@
 					<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
 					<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
 				</ul>
-				<h3>Example code</h3>
+				<h2>Example code</h2>
 <pre>
 &lt;ul class="tabs"&gt;
-	&lt;li&gt;&lt;a class="active" href="#simple">Simple&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#lightweight">Lightweight&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#mobileFriendly">Mobile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="active" href="#simple">Simple&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#lightweight">Lightweight&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#mobileFriendly">Mobile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul class="tabs-content"&gt;
-	&lt;li class="active" id="simple"&gt;Tabs are simple.&lt;/li&gt;
-	&lt;li id="lightweight"&gt;Tabs are cross-browser and light.&lt;/li&gt;
-	&lt;li id="mobileFriendly"&gt;Tabs are mobile friendly.&lt;/li&gt;
+  &lt;li class="active" id="simple"&gt;Tabs are simple.&lt;/li&gt;
+  &lt;li id="lightweight"&gt;Tabs are cross-browser and light.&lt;/li&gt;
+  &lt;li id="mobileFriendly"&gt;Tabs are mobile friendly.&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 			</div>
@@ -402,15 +517,138 @@
 		</section>
 		<hr/>
 
+		<!-- Pagination
+		================================================== -->
+		<section id="pagination">
+		<h1 class="sectionheader">Pagination <small>Two options for paging through content</small></h1>
+		<div class="row">
+			<div class="col4">
+				<h3>When to use</h3>
+				<p>Pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.</p>
+				<h3>Stateful page links</h3>
+				<p>Links are customizable and work in a number of circumstances with the right class. <code>.disabled</code> for unclickable links and <code>.active</code> for current page.</p>
+				<h3>Flexible alignment</h3>
+				<p>Add either of two optional classes to change the alignment of pagination links: <code>.pagination-centered</code> and <code>.pagination-right</code>.</p>
+			</div>
+			<div class="col8">
+				<h2>Examples</h2>
+				<p>The default pagination component is flexible and works in a number of variations.</p>
+				<div class="pagination">
+					<ul>
+						<li class="disabled"><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+				<div class="pagination">
+					<ul>
+						<li><a href="#">&laquo;</a></li>
+						<li><a href="#">10</a></li>
+						<li class="active"><a href="#">11</a></li>
+						<li><a href="#">12</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+				<div class="pagination">
+					<ul>
+						<li><a href="#">&larr;</a></li>
+						<li class="active"><a href="#">10</a></li>
+						<li class="disabled"><a href="#">...</a></li>
+						<li><a href="#">20</a></li>
+						<li><a href="#">&rarr;</a></li>
+					</ul>
+				</div>
+				<div class="pagination pagination-centered">
+					<ul>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+					</ul>
+				</div>
+				<h2>Markup</h2>
+				<p>Wrapped in a <code>&lt;div&gt;</code>, pagination is just a <code>&lt;ul&gt;</code>.</p>
+				<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li>
+    &lt;li class="active"&gt;
+      &lt;a href="#"&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li>
+  &lt;/ul&gt;
+&lt;/div&gt;
+				</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col4">
+				<h2>Pager</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col4">
+				<h3>About pager</h3>
+				<p>The pager component is a set of links for simple pagination implemenations with light markup and even lighter styles. It's great for simple sites like blogs or magazines.</p>
+			</div>
+			<div class="col4">
+				<h2>Default example</h2>
+				<p>By default, the pager centers links.</p>
+				<ul class="pager">
+					<li><a href="#">Previous</a></li>
+					<li><a href="#">Next</a></li>
+				</ul>
+				<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Previous&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Next&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+				</pre>
+			</div>
+			<div class="col4">
+				<h2>Aligned links</h2>
+				<p>You can also align each link to the sides:</p>
+				<ul class="pager clearfix">
+					<li class="previous"><a href="#">&larr; Older</a></li>
+					<li class="next"><a href="#">Newer &rarr;</a></li>
+				</ul>
+				<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;
+    &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+    &lt;a href="#"&gt;Newer &amp;rarr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+				</pre>
+			</div>
+		</div><!-- /row -->
+		</section>
+		<hr />
+
+		<!-- Forms
+		================================================== -->
 		<section>
 		<h1 class="sectionheader">Forms</h1>
 		<div class="row">
 			<div class="col4">
-				<h2>Default forms</h2>
+				<h3>Default forms</h3>
 				<p>Styles provided for text inputs, select lists, textareas, radio buttons and checkboxes, and buttons.</p>
 			</div>
 			<div class="col8">
-				<h3>Example</h3>
+				<h2>Example</h2>
 				<form>
 					<label for="regularInput">Regular Input</label>
 					<input type="text" id="regularInput" />
@@ -461,8 +699,16 @@
 
 	<!-- JS
 	================================================== -->
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/tabs.js"></script>
+	<script src="js/tooltip.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('a[rel=tooltip]').tooltip();
+		});
+	</script>
 
 </body>
 </html>

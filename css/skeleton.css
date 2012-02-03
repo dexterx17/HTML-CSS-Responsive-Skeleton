@@ -54,16 +54,16 @@
     
     /* Offsets */
     .container .offset1                 { padding-left: 80px;  }
-    .container .offset2                 { padding-left: 140px; }
-    .container .offset3                 { padding-left: 200px; }
-    .container .offset4                 { padding-left: 260px; }
-    .container .offset5                 { padding-left: 320px; }
-    .container .offset6                 { padding-left: 380px; }
-    .container .offset7                 { padding-left: 440px; }
-    .container .offset8                 { padding-left: 500px; }
-    .container .offset9                 { padding-left: 560px; }
-    .container .offset10                { padding-left: 620px; }
-    .container .offset11                { padding-left: 680px; }
+    .container .offset2                 { padding-left: 160px; }
+    .container .offset3                 { padding-left: 240px; }
+    .container .offset4                 { padding-left: 320px; }
+    .container .offset5                 { padding-left: 400px; }
+    .container .offset6                 { padding-left: 480px; }
+    .container .offset7                 { padding-left: 560px; }
+    .container .offset8                 { padding-left: 640px; }
+    .container .offset9                 { padding-left: 720px; }
+    .container .offset10                { padding-left: 800px; }
+    .container .offset11                { padding-left: 880px; }
 
 
 
@@ -155,8 +155,8 @@
 
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         .container { width: 420px; }
-        .col1, .col2, .col3, .col4, 
-        .col5, .col6, .col7, .col8, 
+
+        .col4, .col5, .col6, .col7, .col8, 
         .col9, .col10, .col11, .col12 { margin: 0; }
 
         .container .col1,

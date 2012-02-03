@@ -1,4 +1,168 @@
 /* Repurposed Skeleton V1.1 by Dave Gamache at www.getskeleton.com */
+.pagination {
+  height: 36px;
+  margin: 18px 0;
+}
+.pagination ul {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-left: 0;
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.pagination li {
+  display: inline;
+}
+.pagination a {
+  float: left;
+  padding: 0 14px;
+  line-height: 34px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+}
+.pagination a:hover,
+.pagination .active a {
+  background-color: #f5f5f5;
+}
+.pagination .active a {
+  color: #999999;
+  cursor: default;
+}
+.pagination .disabled a,
+.pagination .disabled a:hover {
+  color: #999999;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination li:first-child a {
+  border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.pagination li:last-child a {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
+}
+.pager {
+  margin-left: 0;
+  margin-bottom: 18px;
+  list-style: none;
+  text-align: center;
+  zoom: 1;
+}
+.pager li {
+  display: inline;
+}
+.pager a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.pager a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+.pager .next a {
+  float: right;
+}
+.pager .previous a {
+  float: left;
+}
+.tooltip {
+  position: absolute;
+  z-index: 1020;
+  display: block;
+  visibility: visible;
+  padding: 5px;
+  font-size: 11px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.tooltip.in {
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+}
+.tooltip.top {
+  margin-top: -2px;
+}
+.tooltip.right {
+  margin-left: 2px;
+}
+.tooltip.bottom {
+  margin-top: 2px;
+}
+.tooltip.left {
+  margin-left: -2px;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #000000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #000000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid #000000;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
 /* Table of Content
 ==================================================
 	#Reset & Basics
@@ -118,10 +282,12 @@ section {
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 blockquote:before,
@@ -176,7 +342,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #181818;
+  color: #333333;
   font-family: "Tahoma", "HelveticaNeue", "Helvetica", Arial, sans-serif;
   font-weight: normal;
 }
@@ -193,6 +359,9 @@ h1 {
   line-height: 50px;
   margin-bottom: 14px;
 }
+h1 small {
+  font-size: 28px;
+}
 h2 {
   font-size: 35px;
   line-height: 40px;
@@ -202,6 +371,7 @@ h3 {
   font-size: 28px;
   line-height: 34px;
   margin-bottom: 8px;
+  color: #555555;
 }
 h4 {
   font-size: 21px;
@@ -215,9 +385,11 @@ h5 {
 h6 {
   font-size: 14px;
   line-height: 21px;
+  color: #999999;
+  text-transform: uppercase;
 }
 .subheader {
-  color: #777;
+  color: #555555;
 }
 .sectionheader {
   margin: 1.5em 0 1em;
@@ -234,23 +406,24 @@ p img {
 p.lead {
   font-size: 21px;
   line-height: 27px;
-  color: #777;
+  color: #555555;
 }
 em {
   font-style: italic;
 }
 strong {
   font-weight: bold;
-  color: #333;
+  color: #333333;
 }
 small {
   font-size: 80%;
 }
 /*	Blockquotes  */
-blockquote, blockquote p {
+blockquote,
+blockquote p {
   font-size: 17px;
   line-height: 24px;
-  color: #777;
+  color: #999999;
   font-style: italic;
 }
 blockquote {
@@ -261,13 +434,15 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 12px;
-  color: #555;
+  color: #999999;
 }
 blockquote cite:before {
   content: "\2014 \0020";
 }
-blockquote cite a, blockquote cite a:visited, blockquote cite a:visited {
-  color: #555;
+blockquote cite a,
+blockquote cite a:visited,
+blockquote cite a:visited {
+  color: #999999;
 }
 hr {
   border: solid #ddd;
@@ -276,7 +451,8 @@ hr {
   margin: 10px 0 30px;
   height: 0;
 }
-code, pre {
+code,
+pre {
   padding: 0 3px 2px;
   font-family: Monaco, Andale Mono, Courier New, monospace;
   font-size: 12px;
@@ -315,37 +491,44 @@ pre.normaltxt {
   display: inline;
   font-family: Trebuchet, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.muted {
+  color: #999999;
+}
 /* #Links
 ================================================== */
-a, a:visited {
-  color: #333;
-  text-decoration: underline;
+a,
+a:visited {
+  color: #0088cc;
+  text-decoration: none;
   outline: 0;
 }
-a:hover, a:focus {
-  color: #000;
+a:hover,
+a:focus {
+  color: #005580;
 }
-p a, p a:visited {
+p a,
+p a:visited {
   line-height: inherit;
 }
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
- * Also: hot pink! (or customize the background color to match your design)
+ * Also: uses Herbalife green! (or customize the background color to match your design)
  */
 ::-moz-selection {
-  background: #fe57a1;
-  color: #fff;
+  background: #7BC144;
+  color: #ffffff;
   text-shadow: none;
 }
 ::selection {
-  background: #fe57a1;
-  color: #fff;
+  background: #7BC144;
+  color: #ffffff;
   text-shadow: none;
 }
 /* #Lists
 ================================================== */
-ul, ol {
+ul,
+ol {
   margin-bottom: 20px;
 }
 ul {
@@ -591,7 +774,8 @@ ul.tabs-content > li.active {
   display: block;
 }
 /* Clearfixing tabs for beautiful stacking */
-ul.tabs:before, ul.tabs:after {
+ul.tabs:before,
+ul.tabs:after {
   content: '\0020';
   display: block;
   overflow: hidden;
@@ -652,7 +836,8 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-label, legend {
+label,
+legend {
   display: block;
   font-weight: bold;
   font-size: 13px;
@@ -663,7 +848,8 @@ select {
 input[type="checkbox"] {
   display: inline;
 }
-label span, legend span {
+label span,
+legend span {
   font-weight: normal;
   font-size: 13px;
   color: #444;
@@ -690,10 +876,12 @@ th {
 td {
   border-bottom: 1px dotted #CCC;
 }
-td:first-child, th:first-child {
+td:first-child,
+th:first-child {
   padding-left: 10px;
 }
-th, td {
+th,
+td {
   padding: 5px 10px 5px 0px;
   vertical-align: middle;
   text-align: left;
@@ -746,7 +934,8 @@ caption {
   width: 1px;
 }
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -758,7 +947,8 @@ caption {
 .invisible {
   visibility: hidden;
 }
-/* Contain floats: h5bp.com/q */.clearfix:before, .clearfix:after {
+/* Contain floats: h5bp.com/q */.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
@@ -781,7 +971,8 @@ caption {
     -ms-filter: none !important;
   }
   /* Black prints faster: h5bp.com/s */
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -790,11 +981,14 @@ caption {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
   /* Don't show links for images, or javascript/internal links */
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -802,7 +996,8 @@ caption {
     display: table-header-group;
   }
   /* h5bp.com/t */
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
   img {
@@ -811,11 +1006,14 @@ caption {
   @page  {
     margin: 0.5cm;
   }
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 }
