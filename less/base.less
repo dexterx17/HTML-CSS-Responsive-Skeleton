@@ -11,6 +11,9 @@
 // Components: Tooltips
 @import "tooltip.less";
 
+// Components: common
+@import "sprites.less";
+
 
 /* Table of Content
 ==================================================
@@ -63,6 +66,7 @@
 
  	footer { background: @grayDark url('../images/black_denim.jpg') repeat; width:100%; height:70px; text-align:center; color: @white !important; padding:10px 0; }
 
+ 	section { padding-bottom:20px; border-bottom:1px dotted @grayLight; }
 
 /* #Typography
 ================================================== */
@@ -97,11 +101,13 @@
 	blockquote cite:before { content: "\2014 \0020"; }
 	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: @grayLight; }
 
+/*	Code  */
 	code, pre { padding: 0 3px 2px; font-family: Monaco, Andale Mono, Courier New, monospace; font-size: 12px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
 	code { background-color: #fee9cc; color: rgba(0, 0, 0, 0.75); padding: 1px 3px; }
 	pre { background-color: @grayLighter; display: block; padding: 8.5px; margin: 0 0 18px; line-height: 18px; font-size: 12px; border: 1px solid @grayLight; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 	pre.normaltxt { background:transparent; padding:0; margin:0; line-height:1.4; font-size:100%; border:none; display:inline; font-family: @baseFontFamily; }
 
+/*	Address  */
 	address { display: block; margin-bottom: @baseLineHeight; line-height: @baseLineHeight; font-style: normal; }
 
 
@@ -181,7 +187,7 @@
 	  text-shadow: 0 1px rgba(255, 255, 255, .75);
 	  cursor: pointer;
 	  margin-bottom: 20px;
-	  line-height: 21px;
+	  line-height: @baseLineHeight;
 	  font-family: @baseFontFamily; }
 
 	a.button:hover,
@@ -251,7 +257,7 @@
 		border-width: 1px 1px 0 0;
 		margin: 0;
 		background: @grayLighter;
-		font-size: 13px; }
+		font-size: @baseFontSize; }
 	ul.tabs li a.active {
 		background: @white;
 		height: 30px;
