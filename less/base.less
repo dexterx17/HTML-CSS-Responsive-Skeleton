@@ -124,30 +124,28 @@
  * Also: uses Herbalife green! (or customize the background color to match your design)
  */
 
-::-moz-selection { background: #7BC144; color: @white; text-shadow: none; }
-::selection { background: #7BC144; color: @white; text-shadow: none; }
+::-moz-selection { background: @green; color: @white; text-shadow: none; }
+::selection { background: @green; color: @white; text-shadow: none; }
 
 
 /* #Lists
 ================================================== */
-	ul, ol { margin-bottom: 20px; }
-	ul { list-style: none outside; }
-	ol { list-style: decimal; }
-	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
-	ul.square { list-style: square outside; }
-	ul.circle { list-style: circle outside; }
-	ul.disc { list-style: disc outside; }
-	ul ul, ul ol,
-	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
-	ul ul li, ul ol li,
-	ol ol li, ol ul li { margin-bottom: 6px; }
-	li { line-height: 18px; margin-bottom: 12px; }
-	ul.large li { line-height: @baseLineHeight; }
-	li p { line-height: @baseLineHeight }
+// Unordered and Ordered lists
+ul, ol { padding: 0; margin: 0 0 @baseLineHeight / 2 25px; }
+ul ul,
+ul ol,
+ol ol,
+ol ul { margin-bottom: 0; }
+ul { list-style: disc; }
+ol { list-style: decimal; }
+li { line-height: @baseLineHeight; }
+ul.unstyled { margin-left: 0; list-style: none; }
 
-	dl { margin:0 0 1.5em 0; }
-	dl dt { font-weight:bold; }
-	dl dd { margin-left:1.5em; }
+// Description Lists
+dl { margin-bottom: @baseLineHeight; }
+dt, dd { line-height: @baseLineHeight; }
+dt { font-weight: bold; }
+dd { margin-left: @baseLineHeight / 2; }
 
 /* #Images
 ================================================== */
