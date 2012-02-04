@@ -1,5 +1,4 @@
-/* Repurposed Skeleton V1.1 by Dave Gamache at www.getskeleton.com */
-
+/* Inspired by Skeleton V1.1 by Dave Gamache at www.getskeleton.com - Free to use under the open-source MIT license */
 
 /* Table of Contents
 ==================================================
@@ -20,7 +19,7 @@
     .col9, .col10, .col11, .col12               { float:left; display:inline; margin-left:10px; margin-right:10px; }
     .row                                        { margin-bottom:20px; }
 
-    /* Gridsample is for styleguide reference only */
+    /* Gridsample is for styleguide reference only. Do NOT use class .gridsample anywhere other than styleguide page. */
     .gridsample .col1, .gridsample .col2, 
     .gridsample .col3, .gridsample .col4, 
     .gridsample .col5, .gridsample .col6, 
@@ -64,7 +63,6 @@
     .container .offset9                 { padding-left: 720px; }
     .container .offset10                { padding-left: 800px; }
     .container .offset11                { padding-left: 880px; }
-
 
 
 /* #Tablet (Portrait)

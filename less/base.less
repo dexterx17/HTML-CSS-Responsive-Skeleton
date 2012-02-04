@@ -1,25 +1,7 @@
-/* Repurposed Skeleton V1.1 by Dave Gamache at www.getskeleton.com */
-
-// Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "mixins.less";
-
-// Components: Nav
-@import "pagination.less";
-@import "pager.less";
-
-// Components: Tooltips
-@import "tooltip.less";
-
-// Components: common
-@import "sprites.less";
-
-
 /* Table of Content
 ==================================================
 	#Reset & Basics
 	#Basic Styles
-	#Site Styles
 	#Typography
 	#Links
 	#Lists
@@ -27,7 +9,10 @@
 	#Buttons
 	#Tabs
 	#Forms
-	#Misc */
+	#Tables
+	#Misc
+	#Non semantic helper classes
+	#Print styles */
 
 
 /* #Reset & Basics (Inspired by E. Meyers)
@@ -68,28 +53,33 @@
 
  	section { padding-bottom:20px; border-bottom:1px dotted @grayLight; }
 
+
 /* #Typography
 ================================================== */
+	
+/*	Headings  */
 	h1, h2, h3, h4, h5, h6 {
 		color: @grayDark;
 		font-family: @baseFontFamily;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;
+	h1 { font-size: @baseFontSize + 32; /* 46px */ line-height: 50px; margin-bottom: 14px;
 		small { font-size:28px; }
 	}
-	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
-	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; color:@gray; }
-	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
-	h5 { font-size: 17px; line-height: 24px; }
+	h2 { font-size: @baseFontSize + 21; /* 35px */ line-height: 40px; margin-bottom: 10px; }
+	h3 { font-size: @baseFontSize + 14; /* 28px */ line-height: 34px; margin-bottom: 8px; color:@gray; }
+	h4 { font-size: @baseFontSize + 7; /* 21px */ line-height: 30px; margin-bottom: 4px; }
+	h5 { font-size: @baseFontSize + 3; /* 17px */ line-height: 24px; }
 	h6 { font-size: @baseFontSize; line-height: @baseLineHeight; color:@gray; text-transform:uppercase; }
 	.subheader { color: @gray; }
 	.sectionheader { margin:1.5em 0 1em; line-height:1.2; border-bottom:1px dotted @grayLight; padding-bottom:10px; }
 
+/*	Paragraphs  */
 	p { margin: 0 0 20px 0; }
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px; color: @gray;  }
 
+/*	Emphasis  */
 	em { font-style: italic; }
 	strong { font-weight: bold; color: @grayDark; }
 	small { font-size: 80%; }
@@ -116,20 +106,18 @@
 	a, a:visited { color:@linkColor; text-decoration: none; outline: 0; }
 	a:hover, a:focus { color:@linkColorHover; }
 	p a, p a:visited { line-height: inherit; }
-
-
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
  * Also: uses Herbalife green! (or customize the background color to match your design)
  */
-
 ::-moz-selection { background: @green; color: @white; text-shadow: none; }
 ::selection { background: @green; color: @white; text-shadow: none; }
 
 
 /* #Lists
 ================================================== */
+
 // Unordered and Ordered lists
 ul, ol { padding: 0; margin: 0 0 @baseLineHeight / 2 25px; }
 ul ul,
@@ -146,6 +134,7 @@ dl { margin-bottom: @baseLineHeight; }
 dt, dd { line-height: @baseLineHeight; }
 dt { font-weight: bold; }
 dd { margin-left: @baseLineHeight / 2; }
+
 
 /* #Images
 ================================================== */
@@ -232,6 +221,7 @@ dd { margin-left: @baseLineHeight / 2; }
 
 /* #Tabs (activate in tabs.js)
 ================================================== */
+
 	ul.tabs {
 		display: block;
 		margin: 0 0 20px 0;
@@ -283,7 +273,7 @@ dd { margin-left: @baseLineHeight / 2; }
 		-webkit-border-top-right-radius: 2px;
 		border-top-right-radius: 2px; }
 
-	ul.tabs-content { margin: 0; display: block; }
+	ul.tabs-content { margin: 0; display: block; list-style:none; }
 	ul.tabs-content > li { display:none; }
 	ul.tabs-content > li.active { display: block; }
 
@@ -355,6 +345,7 @@ dd { margin-left: @baseLineHeight / 2; }
 
 /* #Tables
 ================================================== */
+
 	table { margin-bottom: 1.4em; width:100%; }
 	table h1, table h2, table h3, table h4, table h5, table h6 { margin:0; padding:0 }
 	th { border-bottom: 2px solid @grayLight; font-weight: bold; }
@@ -363,8 +354,10 @@ dd { margin-left: @baseLineHeight / 2; }
 	th,td { padding: 5px 10px 5px 0px; vertical-align:middle; text-align:left; }
 	caption { background: #ffc; }
 
+
 /* #Misc
 ================================================== */
+
 	hr { border: dotted @grayLight; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
 
 	.remove-bottom { margin-bottom: 0 !important; }
