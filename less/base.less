@@ -45,6 +45,12 @@
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  }
+/*  This section of selectors is for absolute positioning the footer on the bottom */
+ 	html, body { height:100%; }
+	#wrap { min-height:100%; position:relative; }
+	.ie6 #wrap { height:100%; }
+	.container { padding-bottom:70px; }
+	footer { position:absolute; bottom:0; }
 
  	section { padding-bottom:20px; border-bottom:1px dotted @grayLight; }
 
