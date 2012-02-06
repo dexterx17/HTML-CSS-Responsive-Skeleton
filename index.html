@@ -50,12 +50,12 @@
 		<div class="row">
 			<h1 class="sectionheader">Grid System</h1>
 			<div class="col4">
-				<h2>Default Grid</h2>
+				<h3>Default Grid</h3>
 				<p>The site adheres to a 960px grid containing 12 columns - The main structure is pulled from the <a href="http://getskeleton.com/" target="_blank">Skeleton</a> 
 				framework. There is a 20px margin between each column with a 10px gutter on the left and right sides of the site. The grid is responsive to smaller screen sizes.</p>
 			</div>
 			<div class="col8">
-				<h3>Example of grid markup</h3>
+				<h2>Example of grid markup</h2>
 <pre>
 &lt;div class="col8"&gt;
    ...
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		<div class="gridsample">
-			<div class="row" title="12 column layout">
+			<div class="row" rel="tooltip" title="12 column layout">
 				<div class="col1">1</div>
 				<div class="col1">1</div>
 				<div class="col1">1</div>
@@ -81,7 +81,7 @@
 				<div class="col1">1</div>
 				<div class="col1">1</div>
 			</div>
-			<div class="row" title="6 column layout">
+			<div class="row" rel="tooltip" title="6 column layout">
 				<div class="col2">2</div>
 				<div class="col2">2</div>
 				<div class="col2">2</div>
@@ -89,49 +89,54 @@
 				<div class="col2">2</div>
 				<div class="col2">2</div>
 			</div>
-			<div class="row" title="4 column layout">
+			<div class="row" rel="tooltip" title="4 column layout">
 				<div class="col3">3</div>
 				<div class="col3">3</div>
 				<div class="col3">3</div>
 				<div class="col3">3</div>
 			</div>
-			<div class="row" title="3 column layout">
+			<div class="row" rel="tooltip" title="3 column layout">
 				<div class="col4">4</div>
 				<div class="col4">4</div>
 				<div class="col4">4</div>
 			</div>
-			<div class="row" title="Half and half layout">
+			<div class="row" rel="tooltip" title="Half and half layout">
 				<div class="col6">6</div>
 				<div class="col6">6</div>
 			</div>
-			<div class="row" title="Two thirds and One third column layout">
+			<div class="row" rel="tooltip" title="Two thirds and One third column layout">
 				<div class="col4">4</div>
 				<div class="col8">8</div>
 			</div>
-			<div class="row" title="Single column layout">
+			<div class="row" rel="tooltip" title="Single column layout">
 				<div class="col12">12</div>
 			</div>
 			  
 			<!-- Sweet nested cols cleared with a clearfix class -->
-			<div class="row" title="Nested column layout - 2 columns nested inside another larger one">
+			<div class="row" rel="tooltip" title="Nested column layout - 2 columns nested inside another larger one">
 				<div class="col8 clearfix">
+					Level 1 of column
 					<!-- In nested cols give the first col a class of first
 					and the second a class of last -->
-					<div class="col5 first">5</div>
-					<div class="col3 last">3</div>
+					<div class="row">
+						<div class="col4 first">level 2</div>
+						<div class="col4 last">Level 2</div>
+					</div>
 				</div>
 			</div>
 		</div><!-- gridsample -->
 		</section>
 		
-		<!-- Headings
+
+		<!-- Typography
 		================================================== -->
 		<section id="typography">
 			<h1 class="sectionheader">Typography</h1>
 			<div class="row">
 				<div class="col4">
-					<h2>Headings</h2>
-					<p>A standard typographic hierarchy for structuring your webpages.</p>
+					<h3>Typographic scale</h3>
+					<p>The entire typographic grid is based on two Less variables in our variables.less file: <code>@baseFontSize</code> and 
+					<code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height.</p>
 				</div>
 				<div class="col8">
 					<div class="col4 first">
@@ -143,12 +148,16 @@
 						<h6>h6. Heading 6</h6>
 					</div>
 					<div class="col4 last">
-						<h3>Example paragraph</h3>
-						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<h3>Example body text</h3>
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
+						ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<p>Vestibulum sit amet tempor mi. Etiam imperdiet hendrerit laoreet. Curabitur aliquam scelerisque ultrices. Proin dictum arcu 
+						ac dui tristique vitae lacinia sapien semper.</p>
 					</div>
 				</div>
 			</div>
 			
+
 			<!-- Misc. Elements
 			================================================== -->
 			<div class="row">
@@ -219,6 +228,7 @@
 				</div>
 			</div>
 			
+
 			<!-- Lists
 			================================================== -->
 			<div class="row">
@@ -293,6 +303,7 @@
 			</div>
 		</section>
 		
+
 		<!-- Tables
 		================================================== -->
 		<section id="tables">
@@ -356,6 +367,7 @@
 			</div>
 		</section>
 
+
 		<!-- Buttons
 		================================================== -->
 		<section id="buttons">
@@ -363,24 +375,46 @@
 		<div class="row">
 			<div class="col4">
 				<h3>Default buttons</h3>
-				<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
+				<p>Buttons are intended for action and thus should have appropriate weight while hyperlinks are to be used for objects. For 
+				instance, "Download" should be a button while "recent activity" should be a link.. The standard button is given that weight 
+				with a little bit of depth and a strong hover.</p>
 			</div>
 			<div class="col8">
 				<h2>Example buttons</h2>
 				<p>Button styles can be applied to anything with the <code>.btn</code> applied. Typically you’ll want to apply these to only <code>&lt;a&gt;</code>, 
 				<code>&lt;button&gt;</code>, and select <code>&lt;input&gt;</code> elements. Here’s how it looks:</p>
 				<!-- Just add .button to an anchor -->
-				<a href="#" class="button">Click Me</a>
+				<a href="#" class="btn">Click Me</a>
 
 				<!-- Also works on plain button elements -->
 				<button>Click Me</button>
 
 				<!-- To take up full-width of a container? -->
-				<a href="#" class="full-width button">Click Me</a>
+				<a href="#" class="full-width btn">Click Me</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col4">
+				<h3>Button Sizes</h3>
+				<p>Larger or smaller buttons can be utilized as well by using the <code>btn-large</code> or <code>btn-small</code> classes.</p>
+			</div>
+			<div class="col8">
+				<a href="#" class="btn btn-large">Click Me</a> &nbsp; <a href="#" class="btn btn-small">Click Me</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col4">
+				<h3>Disabled Buttons</h3>
+				<p>For disabled buttons, use <code>.btn-disabled</code> for links and <code>:disabled</code> for <code>&lt;button&gt;</code> elements.</p>
+			</div>
+			<div class="col8">
+				<a href="#" class="btn disabled">Click Me</a>
+				<button disabled>Click Me</button>
 			</div>
 		</div>
 		</section>
 		
+
 		<!-- Tooltips
 	    ================================================== -->
 	    <section id="tooltips">
@@ -481,17 +515,19 @@
 		</div>
 	    </section>
 
+
 		<!-- Tabs
 		================================================== -->
 		<section id="tabs">
 		<h1 class="sectionheader">Tabs</h1>
 		<div class="row">
 			<div class="col4">
-				<h3>Default tabs</h3>
+				<h3>About tabs</h3>
 				<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
 				<p>NOTE: jQuery that fires the change is in tabs.js</p>
 			</div>
 			<div class="col8">
+				<h2>Example tabs</h2>
 				<ul class="tabs">
 					<li><a class="active" href="#simple">Simple</a></li>
 					<li><a href="#lightweight">Lightweight</a></li>
@@ -502,7 +538,7 @@
 					<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
 					<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
 				</ul>
-				<h2>Example code</h2>
+				<h2>Markup</h2>
 <pre>
 &lt;ul class="tabs"&gt;
   &lt;li&gt;&lt;a class="active" href="#simple">Simple&lt;/a&gt;&lt;/li&gt;
@@ -518,6 +554,130 @@
 			</div>
 		</div>
 		</section>
+
+
+		<!-- Thumbnails
+		================================================== -->
+		<section id="thumbnails">
+		<h1 class="sectionheader">Thumbnails <small>Grids of images, videos, text, and more</small></h1>
+		<div class="row">
+			<div class="col6">
+				<h2>Default thumbnails</h2>
+				<p>By default, thumbnails are designed to showcase linked images with minimal required markup.</p>
+				<ul class="thumbnails clearfix">
+					<li class="col3">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/210x148" alt=""></a>
+					</li>
+					<li class="col3">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/210x148" alt=""></a>
+					</li>
+					<li class="col3">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/210x148" alt=""></a>
+					</li>
+					<li class="col3">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/210x148" alt=""></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col6">
+				<h2>Highly customizable</h2>
+				<p>With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</p>
+				<ul class="thumbnails">
+					<li class="col3">
+						<div class="thumbnail">
+							<img src="http://placehold.it/210x148" alt="">
+							<div class="caption">
+								<h5>Thumbnail label</h5>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+								<a href="#" class="btn primary">Action</a> <a href="#" class="btn">Action</a>
+							</div>
+						</div>
+					</li>
+					<li class="col3">
+						<div class="thumbnail">
+							<img src="http://placehold.it/210x148" alt="">
+							<div class="caption">
+								<h5>Thumbnail label</h5>
+								<p>Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								<a href="#" class="btn primary">Action</a> <a href="#" class="btn">Action</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col4">
+				<h3>Why use thumbnails</h3>
+				<p>Thumbnails are great for grids of photos or videos, image search results, retail products, portfolios, and much more. They can be links or static content.</p>
+			</div>
+			<div class="col4">
+				<h3>Simple, flexible markup</h3>
+				<p>Thumbnail markup is simple&mdash;a <code>ul</code> with any number of <code>li</code> elements is all that is required. It's also super flexible, allowing for any type of content with just a bit more markup to wrap your contents.</p>
+			</div>
+			<div class="col4">
+				<h3>Uses grid column sizes</h3>
+				<p>Lastly, the thumbnails component uses existing grid system classes&mdash;like <code>.col2</code> or <code>.col3</code>&mdash;for control of thumbnail dimensions.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col6">
+				<h2>The markup</h2>
+				<p>As mentioned previously, the required markup for thumbnails is light and straightforward. Here's a look at the default setup <strong>for linked images</strong>:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="col3"&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/210x148" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+				<p>For custom HTML content in thumbnails, the markup changes slightly. To allow block level content anywhere, we swap the <code>&lt;a&gt;</code> for a <code>&lt;div&gt;</code> like so:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="col3"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/210x148" alt=""&gt;
+      &lt;h5&gt;Thumbnail label&lt;/h5&gt;
+      &lt;p&gt;Thumbnail caption right here...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+			</div>
+			<div class="col6">
+				<h2>More examples</h2>
+				<p>Explore all your options with the various grid classes available to you. You can also mix and match different sizes.</p>
+				<ul class="thumbnails">
+					<li class="col4">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/290x225" alt=""></a>
+					</li>
+					<li class="col2">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/130x97" alt=""></a>
+					</li>
+					<li class="col2">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/130x97" alt=""></a>
+					</li>
+					<li class="col2">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/130x97" alt=""></a>
+					</li>
+					<li class="col2">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/130x97" alt=""></a>
+					</li>
+					<li class="col2">
+						<a href="#" class="thumbnail"><img src="http://placehold.it/130x97" alt=""></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		</section>
+
 
 		<!-- Pagination
 		================================================== -->
@@ -639,6 +799,7 @@
 		</div><!-- /row -->
 		</section>
 
+
 		<!-- Forms
 		================================================== -->
 		<section>
@@ -689,6 +850,7 @@
 			</div>
 		</div>
 		</section>
+
 
 		<!-- Icons
 		================================================== -->
@@ -891,7 +1053,7 @@
 	<script src="js/tooltip.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$('a[rel=tooltip]').tooltip();
+			$('[rel=tooltip]').tooltip();
 		});
 	</script>
 

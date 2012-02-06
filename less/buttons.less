@@ -1,0 +1,176 @@
+/* #Buttons
+================================================== */
+
+// Base styles
+// --------------------------------------------------
+	//Core
+	a.btn,
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+		display: inline-block;
+		padding: 4px 10px 4px;
+		color: @grayDark;
+		line-height: @baseLineHeight;
+		font-family: @baseFontFamily;
+		font-size: 11px;
+	  	font-weight: bold;
+	  	text-decoration: none;
+	  	text-shadow: 0 1px rgba(255, 255, 255, .75);
+		text-align: center;
+		#gradient > .vertical-three-colors(@white, @white, 15%, darken(@white, 15%)); // Don't use .gradientbar() here since it does a three-color gradient
+		border: 1px solid @grayLight;
+		border-bottom-color: #bbb;
+		.btn-border-radius();
+		@shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+		.box-shadow(@shadow);
+		cursor: pointer;
+
+		// Give IE7 some love
+		.ie7-restore-left-whitespace();
+	}
+
+	// Hover state
+	a.btn:hover,
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {
+		color: @grayDark;
+		text-decoration: none;
+		background-color: darken(@white, 15%);
+		background-position: 0 -15px;
+
+		// transition is only when going to hover, otherwise the background
+		// behind the gradient (there for IE<=9 fallback) gets mismatched
+		.transition(background-position .1s linear);
+	}
+
+	// Active state
+	a.btn:active,
+	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {
+		background-image: none;
+		@shadow: inset 0 2px 4px rgba(0,0,0,.5), 0 1px 2px rgba(0,0,0,.05);
+		.box-shadow(@shadow);
+		background-color: darken(@white, 10%);
+		background-color: darken(@white, 15%) e("\9");
+		color: rgba(0,0,0,.5);
+		outline: 0;
+	}
+
+	// Disabled state
+	.btn.disabled,
+	.btn[disabled],
+	button:disabled,
+	input[type="submit"]:disabled,
+	input[type="reset"]:disabled,
+	input[type="button"]:disabled {
+		cursor: default;
+		background-image: none;
+		background-color: darken(@white, 10%);
+		.opacity(65);
+		.box-shadow(none);
+	}
+	.btn.disabled:hover { background-color: darken(@white, 10%); }
+	.btn.disabled:active { .box-shadow(); }
+
+
+//	a.button,
+//	button,
+//	input[type="submit"],
+//	input[type="reset"],
+//	input[type="button"] {
+//		background: #eee; /* Old browsers */
+//		background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+//		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+//		background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+//		background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+//		background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+//		background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+//	  border: 1px solid #aaa;
+//	  border-top: 1px solid #ccc;
+//	  border-left: 1px solid #ccc;
+//	  padding: 4px 12px;
+//	  -moz-border-radius: 3px;
+//	  -webkit-border-radius: 3px;
+//	  border-radius: 3px;
+//	  color: @gray;
+//	  display: inline-block;
+//	  font-size: 11px;
+//	  font-weight: bold;
+//	  text-decoration: none;
+//	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+//	  cursor: pointer;
+//	  margin-bottom: 20px;
+//	  line-height: @baseLineHeight;
+//	  font-family: @baseFontFamily; }
+
+//	a.button:hover,
+//	button:hover,
+//	input[type="submit"]:hover,
+//	input[type="reset"]:hover,
+//	input[type="button"]:hover {
+//		color: @grayDarker;
+//		background: #ddd; /* Old browsers */
+//		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+//		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+//		background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+//		background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+//		background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+//		background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+//	  border: 1px solid #888;
+//	  border-top: 1px solid #aaa;
+//	  border-left: 1px solid #aaa; }
+
+//	a.button:active,
+//	button:active,
+//	input[type="submit"]:active,
+//	input[type="reset"]:active,
+//	input[type="button"]:active {
+//		border: 1px solid #666;
+//		background: #ccc; /* Old browsers */
+//		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+//		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+//		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+//		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+//		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+//		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+	.btn.full-width,
+	button.full-width,
+	input[type="submit"].full-width,
+	input[type="reset"].full-width,
+	input[type="button"].full-width {
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center; }
+
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large {
+  padding: 9px 14px !important;
+  font-size: @baseFontSize + 2px !important;
+  line-height: normal;
+  .border-radius();
+}
+.btn-large .icon {
+  margin-top: 1px;
+}
+
+// Small
+.btn-small {
+  padding: 5px 9px !important;
+  font-size: 9px !important;
+  line-height: @baseLineHeight - 9px !important;
+}
+.btn-small .icon {
+  margin-top: -1px;
+}

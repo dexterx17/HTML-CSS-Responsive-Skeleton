@@ -10,12 +10,19 @@
 // Components: Nav
 @import "pagination.less";
 @import "pager.less";
+@import "tabs.less";
 
 // Components: Tooltips
 @import "tooltip.less";
 
 // Components: Common
 @import "sprites.less";
+
+// Components: Buttons
+@import "buttons.less";
+
+// Components: Misc
+@import "thumbnails.less";
 
 /* Table of Content
 ==================================================
@@ -26,6 +33,11 @@
 
 /* #Site Styles
 ================================================== */
+	header { background: @grayDark url('../images/black_denim.jpg') repeat; width:100%; text-align:center; color: @white !important; padding:30px 0; }
+ 	header h1 { color: @white; text-shadow:0 0 2px #000; }
+
+ 	footer { background: @grayDark url('../images/black_denim.jpg') repeat; width:100%; height:70px; text-align:center; color: @white !important; padding:10px 0; }
+
 
 /* #Page Styles
 ================================================== */
@@ -44,33 +56,33 @@
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
-		body { font-size: @baseFontSize - 2; }
-		h1 { font-size: @baseFontSize + 21;
-			small { font-size: @baseFontSize + 12; }
+		body { font-size: @baseFontSize - 2px; }
+		h1 { font-size: @baseFontSize + 21px;
+			small { font-size: @baseFontSize + 12px; }
 		}
-		h2 { font-size: @baseFontSize + 14; }
-		h3 { font-size: @baseFontSize + 7; }
-		h4 { font-size: @baseFontSize + 3; }
+		h2 { font-size: @baseFontSize + 14px; }
+		h3 { font-size: @baseFontSize + 7px; }
+		h4 { font-size: @baseFontSize + 3px; }
 		h5 { font-size: @baseFontSize; }
-		h6 { font-size: @baseFontSize - 2; }
+		h6 { font-size: @baseFontSize - 2px; }
 		blockquote, blockquote p { font-size: @baseFontSize; }
-		ul.tabs li a { font-size: @baseFontSize - 1; }
+		ul.tabs li a { font-size: @baseFontSize - 1px; }
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-		body { font-size: @baseFontSize - 2; }
-		body { font-size: @baseFontSize - 2; }
-		h1 { font-size: @baseFontSize + 21;
-			small { font-size: @baseFontSize + 12; }
+		body { font-size: @baseFontSize - 2px; }
+		body { font-size: @baseFontSize - 2px; }
+		h1 { font-size: @baseFontSize + 21px;
+			small { font-size: @baseFontSize + 12px; }
 		}
-		h2 { font-size: @baseFontSize + 14; }
-		h3 { font-size: @baseFontSize + 7; }
-		h4 { font-size: @baseFontSize + 3; }
+		h2 { font-size: @baseFontSize + 14px; }
+		h3 { font-size: @baseFontSize + 7px; }
+		h4 { font-size: @baseFontSize + 3px; }
 		h5 { font-size: @baseFontSize; }
-		h6 { font-size: @baseFontSize - 2; }
+		h6 { font-size: @baseFontSize - 2px; }
 		blockquote, blockquote p { font-size: @baseFontSize; }
-		ul.tabs li a { font-size: @baseFontSize - 1; }
+		ul.tabs li a { font-size: @baseFontSize - 1px; }
 	}
 
 

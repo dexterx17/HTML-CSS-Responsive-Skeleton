@@ -18,6 +18,10 @@
     .col5, .col6, .col7, .col8, 
     .col9, .col10, .col11, .col12               { float:left; display:inline; margin-left:10px; margin-right:10px; }
     .row                                        { margin-bottom:20px; }
+    .col1 > .row, .col2 > .row, .col3 > .row,
+    .col4 > .row, .col5 > .row, .col6 > .row,
+    .col7 > .row, .col8 > .row, .col9 > .row,
+    .col10 > .row, .col11 > .row, .col12 > .row { margin-bottom:0; }
 
     /* Gridsample is for styleguide reference only. Do NOT use class .gridsample anywhere other than styleguide page. */
     .gridsample .col1, .gridsample .col2, 
@@ -25,13 +29,9 @@
     .gridsample .col5, .gridsample .col6, 
     .gridsample .col7, .gridsample .col8, 
     .gridsample .col9, .gridsample .col10, 
-    .gridsample .col11, .gridsample .col12                  { background:#efefef; text-align:center; padding:5px 0; }
-    .gridsample .col1:hover, .gridsample .col2:hover, 
-    .gridsample .col3:hover, .gridsample .col4:hover, 
-    .gridsample .col5:hover, .gridsample .col6:hover, 
-    .gridsample .col7:hover, .gridsample .col8:hover, 
-    .gridsample .col9:hover, .gridsample .col10:hover, 
-    .gridsample .col11:hover, .gridsample .col12:hover      { background:#CCC; text-align:center; }
+    .gridsample .col11, .gridsample .col12      { background:#efefef; text-align:center; min-height:30px; line-height:30px; }
+    .gridsample > .row:hover div                { background:#CCC; }
+    .gridsample > .row div > .row div           { background:#DDD; }
 
     /* Nested col Classes */
     .first              { margin-left:0; }
