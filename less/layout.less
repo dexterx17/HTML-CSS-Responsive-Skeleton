@@ -4,8 +4,9 @@
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
 @import "mixins.less";
 
-// Base styles used in styleguide
+// Grid system and page structure
 @import "base.less"; // All styles in layout.less are built on top of base.less
+@import "skeleton.less"; // Grid
 
 // Components: Nav
 @import "pagination.less";
@@ -68,6 +69,20 @@
 		h6 { font-size: @baseFontSize - 2px; }
 		blockquote, blockquote p { font-size: @baseFontSize; }
 		ul.tabs li a { font-size: @baseFontSize - 1px; }
+
+	/* Thumbnails */
+		.container .thumbnails > li.col1 { width: 60px; margin:0 0 @baseLineHeight 20px; }
+		.container .thumbnails > li.col2 { width: 87px; margin:0 0 @baseLineHeight 20px; }
+		.container .thumbnails > li.col3 { width: 200px; margin:0 0 @baseLineHeight 20px; }
+		.container .thumbnails > li.col4,
+		.container .thumbnails > li.col5,
+		.container .thumbnails > li.col6,
+		.container .thumbnails > li.col7,
+		.container .thumbnails > li.col8,
+		.container .thumbnails > li.col9,
+		.container .thumbnails > li.col10 { width: 300px; margin:0 0 @baseLineHeight 20px; }
+		.container .thumbnails > li.col11,
+		.container .thumbnails > li.col12 { width: 100%; margin:0 0 @baseLineHeight 10px; .box-sizing(border-box); }
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -84,6 +99,20 @@
 		h6 { font-size: @baseFontSize - 2px; }
 		blockquote, blockquote p { font-size: @baseFontSize; }
 		ul.tabs li a { font-size: @baseFontSize - 1px; }
+	
+	/* Thumbnails */
+		.container .thumbnails > li.col1 { width: 60px; margin:0 0 @baseLineHeight 20px; }
+	    .container .thumbnails > li.col2 { width: 86px; margin:0 0 @baseLineHeight 20px; }
+		.container .thumbnails > li.col3 { width: 200px; margin:0 0 @baseLineHeight 20px; }
+		.container .thumbnails > li.col4,
+		.container .thumbnails > li.col5,
+		.container .thumbnails > li.col6,
+		.container .thumbnails > li.col7,
+		.container .thumbnails > li.col8,
+		.container .thumbnails > li.col9,
+		.container .thumbnails > li.col10,
+		.container .thumbnails > li.col11,
+		.container .thumbnails > li.col12 { width: 300px; margin:0 0 @baseLineHeight 20px; }
 	}
 
 
