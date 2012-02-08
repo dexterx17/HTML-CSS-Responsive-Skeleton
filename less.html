@@ -56,30 +56,30 @@
 <section id="builtWith">
   <h1 class="sectionheader">Built with LESS</h1>
   <div class="row">
-    <div class="col4">
+    <div class="span4">
       <h3>Why LESS?</h3>
       <p>This framework is made with LESS at its core, a dynamic stylesheet language created by <a href="http://cloudhead.io">Alexis Sellier</a>. It makes developing systems-based CSS faster, easier, and more fun.</p>
     </div>
-    <div class="col4">
+    <div class="span4">
       <h3>What's included?</h3>
       <p>As an extension of CSS, LESS includes variables, mixins for reusable snippets of code, operations for simple math, nesting, and even color functions.</p>
     </div>
-    <div class="col4">
+    <div class="span4">
       <h3>Learn more</h3>
       <img style="float: right; height: 36px;" src="images/less-logo-large.png" alt="LESS CSS">
       <p>Visit the official website at <a href="http://lesscss.org">http://lesscss.org</a> to learn more.</p>
     </div>
   </div>
   <div class="row">
-    <div class="col4">
+    <div class="span4">
       <h3><a href="#variables">Variables</a></h3>
       <p>Managing colors and pixel values in CSS can be a bit of a pain, usually full of copy and paste. But not with LESS&mdash;just assign colors or pixel values as variables and change them once.</p>
     </div>
-    <div class="col4">
+    <div class="span4">
       <h3><a href="#mixins">Mixins</a></h3>
       <p>Those three border-radius declarations you need to make in regular ol' CSS? Now they're down to one line with the help of mixins, snippets of code you can reuse anywhere.</p>
     </div>
-    <div class="col4">
+    <div class="span4">
     </div>
   </div>
 </section>
@@ -91,7 +91,7 @@
 <section id="variables">
   <h1 class="sectionheader">Variables <small>LESS variables, their values, and usage guidelines</small></h1>
   <div class="row">
-    <div class="col8">
+    <div class="span8">
       <h3>Hyperlinks</h3>
       <table>
         <tbody>
@@ -144,7 +144,7 @@
         </tbody>
       </table>
     </div>
-    <div class="col4">
+    <div class="span4">
       <h3>Grayscale colors</h3>
       <table>
         <tbody>
@@ -155,18 +155,18 @@
           </tr>
           <tr>
             <td><code>@grayDarker</code></td>
-            <td>#222</td>
-            <td><span class="swatch" style="background-color: #222;"></span></td>
-          </tr>
-          <tr>
-            <td><code>@grayDark</code></td>
             <td>#333</td>
             <td><span class="swatch" style="background-color: #333;"></span></td>
           </tr>
           <tr>
+            <td><code>@grayDark</code></td>
+            <td>#555</td>
+            <td><span class="swatch" style="background-color: #555;"></span></td>
+          </tr>
+          <tr>
             <td><code>@gray</code></td>
-            <td>#666</td>
-            <td><span class="swatch" style="background-color: #666;"></span></td>
+            <td>#999</td>
+            <td><span class="swatch" style="background-color: #999;"></span></td>
           </tr>
           <tr>
             <td><code>@grayLight</code></td>
@@ -213,7 +213,7 @@
   <h1 class="sectionheader">Mixins <small></small></h1>
   <h2>About mixins</h2>
   <div class="row">
-    <div class="col4">
+    <div class="span4">
       <h3>Basic mixins</h3>
       <p>A basic mixin is essentially an include or a partial for a snippet of CSS. They're written just like a CSS class and can be called anywhere.</p>
 <pre>
@@ -221,8 +221,8 @@
   .clearfix();
 }
 </pre>
-    </div><!-- /col4 -->
-    <div class="col4">
+    </div><!-- /span4 -->
+    <div class="span4">
       <h3>Parametric mixins</h3>
       <p>A parametric mixin is just like a basic mixin, but it also accepts parameters (hence the name) with optional default values.</p>
 <pre>
@@ -230,12 +230,12 @@
   .border-radius(4px);
 }
 </pre>
-    </div><!-- /col4 -->
-    <div class="col4">
+    </div><!-- /span4 -->
+    <div class="span4">
       <h3>Easily add your own</h3>
       <p>Nearly all mixins are stored in mixins.less, a wonderful utility .less file that enables you to use a mixin in any of the .less files in the toolkit.</p>
       <p>So, go ahead and use the existing ones or feel free to add your own as you need.</p>
-    </div><!-- /col4 -->
+    </div><!-- /span4 -->
   </div><!-- /row -->
   <h2>Included mixins</h2>
   <h3>Utilities</h3>
@@ -439,20 +439,20 @@
   </div>
   <h2>Tools for compiling</h2>
   <div class="row">
-    <div class="col4">
+    <div class="span4">
       <h3>Node with makefile</h3>
       <p>Install the LESS command line compiler with npm by running the following command:</p>
       <pre>$ npm install less</pre>
       <p>Once installed just run <code>make</code> from the root of your framework directory and you're all set.</p>
       <p>Additionally, if you have <a href="https://github.com/mynyml/watchr">watchr</a> installed, you may run <code>make watch</code> to have the framework  automatically rebuilt every time you edit a file in the lib (this isn't required, just a convenience method).</p>
-    </div><!-- /col4 -->
-    <div class="col4">
+    </div><!-- /span4 -->
+    <div class="span4">
       <h3>Command line</h3>
       <p>Install the LESS command line tool via Node and run the following command:</p>
         <pre>$ lessc ./lib/layout.less > layout.css</pre>
       <p>Be sure to include <code>--compress</code> in that command if you're trying to save some bytes!</p>
-    </div><!-- /col4 -->
-    <div class="col4">
+    </div><!-- /span4 -->
+    <div class="span4">
       <h3>Javascript</h3>
       <p><a href="http://lesscss.org/">Download the latest Less.js</a> and include the path to it (and the layout.less) in the <code>&lt;head&gt;</code>.</p>
 <pre class="prettyprint">
@@ -460,15 +460,15 @@
 &lt;script src="/path/to/less.js"&gt;&lt;/script&gt;
 </pre>
       <p>To recompile the .less files, just save them and reload your page. Less.js compiles them and stores them in local storage.</p>
-    </div><!-- /col4 -->
+    </div><!-- /span4 -->
   </div><!-- /row -->
   <div class="row">
-    <div class="col4">
+    <div class="span4">
       <h3>Unofficial Mac app</h3>
       <p><a href="http://incident57.com/less/">The unofficial Mac app</a> watches directories of .less files and compiles the code to local files after every save of a watched .less file.</p>
       <p>If you like, you can toggle preferences in the app for automatic minifying and which directory the compiled files end up in.</p>
-    </div><!-- /col4 -->
-    <div class="col4">
+    </div><!-- /span4 -->
+    <div class="span4">
       <h3>More Mac apps</h3>
       <h4><a href="http://crunchapp.net/" target="_blank">Crunch</a></h4>
       <p>Crunch is a great looking LESS editor and compiler built on Adobe Air.</p>
@@ -476,7 +476,7 @@
       <p>Created by the same guy as the unofficial Mac app, CodeKit is a Mac app that compiles LESS, SASS, Stylus, and CoffeeScript.</p>
       <h4><a href="http://wearekiss.com/simpless" target="_blank">Simpless</a></h4>
       <p>Mac, Linux, and PC app for drag and drop compiling of LESS files. Plus, the <a href="https://github.com/Paratron/SimpLESS" target="_blank">source code is on GitHub</a>.</p>
-    </div><!-- /col4 -->
+    </div><!-- /span4 -->
   </div><!-- /row -->
 </section>
 
@@ -486,14 +486,14 @@
   ================================================== -->
   <footer>
     <div class="container">
-      <div class="col6">
+      <div class="span6">
         <p>
           <a href="#"><i class="icon-chevron-up icon-white"></i> Back to top</a> &nbsp; 
           <a href="index.html"><i class="icon-chevron-right icon-white"></i> Styleguide</a> &nbsp; 
           <a href="less.html"><i class="icon-chevron-right icon-white"></i> How to use LESS</a>
         </p>
       </div>
-      <div class="col6">
+      <div class="span6">
         <span class="right">Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</span></p>
       </div>
     </div>
