@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Mark's Custom Skeleton</title>
+  <meta name="description" content="I'm trying something new out, so don't get excited.">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <body class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="no-js ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <body> <!--<![endif]-->
+
+<div id="wrap"> <!-- Only used for absolute positioning the footer on the bottom -->
+
+  <!-- Primary Page Layout
+  ================================================== -->
+  <header>
+    <h1>Mark's Custom Skeleton</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="row">
+      <h1 class="sectionheader">Using LESS with this framework</h1>
+      <p class="lead">Customize and extend this framework with <a href="http://lesscss.org" target="_blank">LESS</a>, a CSS preprocessor, to take advantage of the variables, mixins, and more used to build the CSS.</p>
+    </div>
+
+
+
+<!-- BUILT WITH LESS
+================================================== -->
+<section id="builtWith">
+  <h1 class="sectionheader">Built with LESS</h1>
+  <div class="row">
+    <div class="col4">
+      <h3>Why LESS?</h3>
+      <p>This framework is made with LESS at its core, a dynamic stylesheet language created by <a href="http://cloudhead.io">Alexis Sellier</a>. It makes developing systems-based CSS faster, easier, and more fun.</p>
+    </div>
+    <div class="col4">
+      <h3>What's included?</h3>
+      <p>As an extension of CSS, LESS includes variables, mixins for reusable snippets of code, operations for simple math, nesting, and even color functions.</p>
+    </div>
+    <div class="col4">
+      <h3>Learn more</h3>
+      <img style="float: right; height: 36px;" src="images/less-logo-large.png" alt="LESS CSS">
+      <p>Visit the official website at <a href="http://lesscss.org">http://lesscss.org</a> to learn more.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col4">
+      <h3><a href="#variables">Variables</a></h3>
+      <p>Managing colors and pixel values in CSS can be a bit of a pain, usually full of copy and paste. But not with LESS&mdash;just assign colors or pixel values as variables and change them once.</p>
+    </div>
+    <div class="col4">
+      <h3><a href="#mixins">Mixins</a></h3>
+      <p>Those three border-radius declarations you need to make in regular ol' CSS? Now they're down to one line with the help of mixins, snippets of code you can reuse anywhere.</p>
+    </div>
+    <div class="col4">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- VARIABLES
+================================================== -->
+<section id="variables">
+  <h1 class="sectionheader">Variables <small>LESS variables, their values, and usage guidelines</small></h1>
+  <div class="row">
+    <div class="col8">
+      <h3>Hyperlinks</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td><code>@linkColor</code></td>
+            <td>#7BC144</td>
+            <td>Default link text color</td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #7BC144;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@linkColorHover</code></td>
+            <td><code>darken(@linkColor, 15%)</code></td>
+            <td>Default link text hover color</td>
+            <td><span class="swatch" style="background-color: #51802d;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Grid system</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td><code>@gridColumns</code></td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td><code>@gridColumnWidth</code></td>
+            <td>60px</td>
+          </tr>
+          <tr>
+            <td><code>@gridGutterWidth</code></td>
+            <td>20px</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Typography</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td><code>@baseFontSize</code></td>
+            <td>14px</td>
+          </tr>
+          <tr>
+            <td><code>@baseFontFamily</code></td>
+            <td><code>"Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif</code></td>
+          </tr>
+          <tr>
+            <td><code>@baseLineHeight</code></td>
+            <td>21px</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col4">
+      <h3>Grayscale colors</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td><code>@black</code></td>
+            <td>#000</td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #000;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayDarker</code></td>
+            <td>#222</td>
+            <td><span class="swatch" style="background-color: #222;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayDark</code></td>
+            <td>#333</td>
+            <td><span class="swatch" style="background-color: #333;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@gray</code></td>
+            <td>#666</td>
+            <td><span class="swatch" style="background-color: #666;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayLight</code></td>
+            <td>#CCC</td>
+            <td><span class="swatch" style="background-color: #CCC;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayLighter</code></td>
+            <td>#EFEFEF</td>
+            <td><span class="swatch" style="background-color: #EFEFEF;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@white</code></td>
+            <td>#FFF</td>
+            <td><span class="swatch swatch-bordered" style="background-color: #FFF;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Accent colors</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td><code>@green</code></td>
+            <td>#7BC144</td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #7BC144;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@orange</code></td>
+            <td>#FFA438</td>
+            <td><span class="swatch" style="background-color: #FFA438;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> <!-- /row -->
+
+</section>
+
+
+
+<!-- MIXINS
+================================================== -->
+<section id="mixins">
+  <h1 class="sectionheader">Mixins <small></small></h1>
+  <h2>About mixins</h2>
+  <div class="row">
+    <div class="col4">
+      <h3>Basic mixins</h3>
+      <p>A basic mixin is essentially an include or a partial for a snippet of CSS. They're written just like a CSS class and can be called anywhere.</p>
+<pre>
+.element {
+  .clearfix();
+}
+</pre>
+    </div><!-- /col4 -->
+    <div class="col4">
+      <h3>Parametric mixins</h3>
+      <p>A parametric mixin is just like a basic mixin, but it also accepts parameters (hence the name) with optional default values.</p>
+<pre>
+.element {
+  .border-radius(4px);
+}
+</pre>
+    </div><!-- /col4 -->
+    <div class="col4">
+      <h3>Easily add your own</h3>
+      <p>Nearly all mixins are stored in mixins.less, a wonderful utility .less file that enables you to use a mixin in any of the .less files in the toolkit.</p>
+      <p>So, go ahead and use the existing ones or feel free to add your own as you need.</p>
+    </div><!-- /col4 -->
+  </div><!-- /row -->
+  <h2>Included mixins</h2>
+  <h3>Utilities</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Mixin</th>
+        <th>Parameters</th>
+        <th>Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.clearfix()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Add to any parent to clear floats within</td>
+      </tr>
+      <tr>
+        <td><code>.tab-focus()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Apply the Webkit focus style and round Firefox outline</td>
+      </tr>
+      <tr>
+        <td><code>.center-block()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Auto center a block-level element using <code>margin: auto</code></td>
+      </tr>
+      <tr>
+        <td><code>.ie7-inline-block()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Use in addition to regular <code>display: inline-block</code> to get IE7 support</td>
+      </tr>
+      <tr>
+        <td><code>.size()</code></td>
+        <td><code>@height: 5px, @width: 5px</code></td>
+        <td>Quickly set the height and width on one line</td>
+      </tr>
+      <tr>
+        <td><code>.square()</code></td>
+        <td><code>@size: 5px</code></td>
+        <td>Builds on <code>.size()</code> to set the width and height as same value</td>
+      </tr>
+      <tr>
+        <td><code>.opacity()</code></td>
+        <td><code>@opacity: 100</code></td>
+        <td>Set, in whole numbers, the opacity percentage (e.g., "50" or "75")</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Forms</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Mixin</th>
+        <th>Parameters</th>
+        <th>Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.placeholder()</code></td>
+        <td><code>@color: @placeholderText</code></td>
+        <td>Set the <code>placeholder</code> text color for inputs</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>CSS3 properties</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Mixin</th>
+        <th>Parameters</th>
+        <th>Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.border-radius()</code></td>
+        <td><code>@radius: 5px</code></td>
+        <td>Round the corners of an element. Can be a single value or four space-separated values</td>
+      </tr>
+      <tr>
+        <td><code>.box-shadow()</code></td>
+        <td><code>@shadow: 0 1px 3px rgba(0,0,0,.25)</code></td>
+        <td>Add a drop shadow to an element</td>
+      </tr>
+      <tr>
+        <td><code>.transition()</code></td>
+        <td><code>@transition</code></td>
+        <td>Add CSS3 transition effect (e.g., <code>all .2s linear</code>)</td>
+      </tr>
+      <tr>
+        <td><code>.rotate()</code></td>
+        <td><code>@degrees</code></td>
+        <td>Rotate an element <em>n</em> degrees</td>
+      </tr>
+      <tr>
+        <td><code>.scale()</code></td>
+        <td><code>@ratio</code></td>
+        <td>Scale an element to <em>n</em> times it's original size</td>
+      </tr>
+      <tr>
+        <td><code>.translate()</code></td>
+        <td><code>@x: 0, @y: 0</code></td>
+        <td>Move an element on the x and y planes</td>
+      </tr>
+      <tr>
+        <td><code>.background-clip()</code></td>
+        <td><code>@clip</code></td>
+        <td>Crop the backgroud of an element (useful for <code>border-radius</code>)</td>
+      </tr>
+      <tr>
+        <td><code>.background-size()</code></td>
+        <td><code>@size</code></td>
+        <td>Control the size of background images via CSS3</td>
+      </tr>
+      <tr>
+        <td><code>.box-sizing()</code></td>
+        <td><code>@boxmodel</code></td>
+        <td>Change the box model for an element (e.g., <code>border-box</code> for a full-width <code>input</code>)</td>
+      </tr>
+      <tr>
+        <td><code>.user-select()</code></td>
+        <td><code>@select</code></td>
+        <td>Control cursor selection of text on a page</td>
+      </tr>
+      <tr>
+        <td><code>.resizable()</code></td>
+        <td><code>@direction: both</code></td>
+        <td>Make any element resizable on the right and bottom</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Backgrounds and gradients</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Mixin</th>
+        <th>Parameters</th>
+        <th>Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.#translucent > .background()</code></td>
+        <td><code>@color: @white, @alpha: 1</code></td>
+        <td>Give an element a translucent background color</td>
+      </tr>
+      <tr>
+        <td><code>.#translucent > .border()</code></td>
+        <td><code>@color: @white, @alpha: 1</code></td>
+        <td>Give an element a translucent border color</td>
+      </tr>
+      <tr>
+        <td><code>.#gradient > .vertical()</code></td>
+        <td><code>@startColor, @endColor</code></td>
+        <td>Create a cross-browser vertical background gradient</td>
+      </tr>
+      <tr>
+        <td><code>.#gradient > .horizontal()</code></td>
+        <td><code>@startColor, @endColor</code></td>
+        <td>Create a cross-browser horizontal background gradient</td>
+      </tr>
+      <tr>
+        <td><code>.#gradient > .directional()</code></td>
+        <td><code>@startColor, @endColor, @deg</code></td>
+        <td>Create a cross-browser directional background gradient</td>
+      </tr>
+      <tr>
+        <td><code>.#gradient > .vertical-three-colors()</code></td>
+        <td><code>@startColor, @midColor, @colorStop, @endColor</code></td>
+        <td>Create a cross-browser three-color background gradient</td>
+      </tr>
+      <tr>
+        <td><code>.#gradient > .radial()</code></td>
+        <td><code>@innerColor, @outerColor</code></td>
+        <td>Create a cross-browser radial background gradient</td>
+      </tr>
+      <tr>
+        <td><code>.#gradient > .striped()</code></td>
+        <td><code>@color, @angle</code></td>
+        <td>Create a cross-browser striped background gradient</td>
+      </tr>
+      <tr>
+        <td><code>.#gradientBar()</code></td>
+        <td><code>@primaryColor, @secondaryColor</code></td>
+        <td>Used for buttons to assign a gradient and slightly darker border</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- COMPILING LESS
+================================================== -->
+<section id="compiling">
+  <h1 class="sectionheader">Compiling with LESS</h1>
+  <div style="margin:-25px 0 15px;">
+    <strong>Note:</strong> When updating the LESS files, you <strong>must</strong> recompile the CSS via any of these methods.
+  </div>
+  <h2>Tools for compiling</h2>
+  <div class="row">
+    <div class="col4">
+      <h3>Node with makefile</h3>
+      <p>Install the LESS command line compiler with npm by running the following command:</p>
+      <pre>$ npm install less</pre>
+      <p>Once installed just run <code>make</code> from the root of your framework directory and you're all set.</p>
+      <p>Additionally, if you have <a href="https://github.com/mynyml/watchr">watchr</a> installed, you may run <code>make watch</code> to have the framework  automatically rebuilt every time you edit a file in the lib (this isn't required, just a convenience method).</p>
+    </div><!-- /col4 -->
+    <div class="col4">
+      <h3>Command line</h3>
+      <p>Install the LESS command line tool via Node and run the following command:</p>
+        <pre>$ lessc ./lib/layout.less > layout.css</pre>
+      <p>Be sure to include <code>--compress</code> in that command if you're trying to save some bytes!</p>
+    </div><!-- /col4 -->
+    <div class="col4">
+      <h3>Javascript</h3>
+      <p><a href="http://lesscss.org/">Download the latest Less.js</a> and include the path to it (and the layout.less) in the <code>&lt;head&gt;</code>.</p>
+<pre class="prettyprint">
+&lt;link rel="stylesheet/less" href="/path/to/layout.less"&gt;
+&lt;script src="/path/to/less.js"&gt;&lt;/script&gt;
+</pre>
+      <p>To recompile the .less files, just save them and reload your page. Less.js compiles them and stores them in local storage.</p>
+    </div><!-- /col4 -->
+  </div><!-- /row -->
+  <div class="row">
+    <div class="col4">
+      <h3>Unofficial Mac app</h3>
+      <p><a href="http://incident57.com/less/">The unofficial Mac app</a> watches directories of .less files and compiles the code to local files after every save of a watched .less file.</p>
+      <p>If you like, you can toggle preferences in the app for automatic minifying and which directory the compiled files end up in.</p>
+    </div><!-- /col4 -->
+    <div class="col4">
+      <h3>More Mac apps</h3>
+      <h4><a href="http://crunchapp.net/" target="_blank">Crunch</a></h4>
+      <p>Crunch is a great looking LESS editor and compiler built on Adobe Air.</p>
+      <h4><a href="http://incident57.com/codekit/" target="_blank">CodeKit</a></h4>
+      <p>Created by the same guy as the unofficial Mac app, CodeKit is a Mac app that compiles LESS, SASS, Stylus, and CoffeeScript.</p>
+      <h4><a href="http://wearekiss.com/simpless" target="_blank">Simpless</a></h4>
+      <p>Mac, Linux, and PC app for drag and drop compiling of LESS files. Plus, the <a href="https://github.com/Paratron/SimpLESS" target="_blank">source code is on GitHub</a>.</p>
+    </div><!-- /col4 -->
+  </div><!-- /row -->
+</section>
+
+  </div><!-- /container -->
+
+  <!-- Footer
+  ================================================== -->
+  <footer>
+    <div class="container">
+      <div class="col6">
+        <p>
+          <a href="#"><i class="icon-chevron-up icon-white"></i> Back to top</a> &nbsp; 
+          <a href="index.html"><i class="icon-chevron-right icon-white"></i> Styleguide</a> &nbsp; 
+          <a href="less.html"><i class="icon-chevron-right icon-white"></i> How to use LESS</a>
+        </p>
+      </div>
+      <div class="col6">
+        <span class="right">Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</span></p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /wrap -->
+
+
+  <!-- JS
+  ================================================== -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+  <script src="js/tabs.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('[rel=tooltip]').tooltip();
+    });
+  </script>
+
+  </body>
+</html>

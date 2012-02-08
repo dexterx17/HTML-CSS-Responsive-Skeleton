@@ -163,7 +163,7 @@ body {
 #wrap {
   min-height: 100%;
   position: relative;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 .ie6 #wrap {
   height: 100%;
@@ -174,7 +174,7 @@ footer {
 }
 section {
   padding-bottom: 20px;
-  border-bottom: 1px dotted #dddddd;
+  border-bottom: 1px dotted #cccccc;
 }
 /* #Typography
 ================================================== */
@@ -242,7 +242,7 @@ h6 {
 .sectionheader {
   margin: 1.5em 0 1em;
   line-height: 1.2;
-  border-bottom: 1px dotted #dddddd;
+  border-bottom: 1px dotted #cccccc;
   padding-bottom: 10px;
 }
 /*	Paragraphs  */
@@ -280,7 +280,7 @@ blockquote p {
 blockquote {
   margin: 0 0 20px;
   padding: 9px 20px 0 19px;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #cccccc;
 }
 blockquote cite {
   display: block;
@@ -294,7 +294,7 @@ blockquote cite:before {
 blockquote cite a,
 blockquote cite a:visited,
 blockquote cite a:visited {
-  color: #dddddd;
+  color: #cccccc;
 }
 /*	Code  */
 code,
@@ -318,7 +318,7 @@ pre {
   margin: 0 0 18px;
   line-height: 18px;
   font-size: 12px;
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -500,11 +500,11 @@ table h6 {
   padding: 0;
 }
 th {
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #cccccc;
   font-weight: bold;
 }
 td {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #cccccc;
 }
 td:first-child,
 th:first-child {
@@ -522,7 +522,7 @@ caption {
 /* #Misc
 ================================================== */
 hr {
-  border: dotted #dddddd;
+  border: dotted #cccccc;
   border-width: 1px 0 0;
   clear: both;
   margin: 10px 0 30px;
@@ -538,7 +538,29 @@ hr {
   margin-bottom: 20px !important;
 }
 .muted {
-  color: #dddddd;
+  color: #cccccc;
+}
+/* Color swatches on LESS docs page
+	-------------------------------------------------- */
+/* Sets the width of the td */
+.swatch-col {
+  width: 30px;
+}
+/* Le swatch */
+.swatch {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  margin: -6px 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+/* For white swatches, give a border */
+.swatch-bordered {
+  width: 28px;
+  height: 18px;
+  border: 1px solid #eee;
 }
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
@@ -1040,7 +1062,7 @@ hr {
   padding: 0 14px;
   line-height: 40px;
   text-decoration: none;
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   border-left-width: 0;
 }
 .pagination a:hover,
@@ -1079,7 +1101,16 @@ hr {
   margin-bottom: 21px;
   list-style: none;
   text-align: center;
+  *zoom: 1;
   zoom: 1;
+}
+.pager:before,
+.pager:after {
+  display: table;
+  content: "";
+}
+.pager:after {
+  clear: both;
 }
 .pager li {
   display: inline;
@@ -1088,7 +1119,7 @@ hr {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -1126,7 +1157,7 @@ ul.tabs li a {
   height: 29px;
   padding: 0px 20px;
   line-height: 30px;
-  border: solid 1px #dddddd;
+  border: solid 1px #cccccc;
   border-width: 1px 1px 0 0;
   margin: 0;
   background: #efefef;
@@ -1275,6 +1306,7 @@ ul.tabs {
   background-image: url(../images/glyphicons-halflings.png);
   background-position: 14px 14px;
   background-repeat: no-repeat;
+  margin-top: 2px;
   *margin-right: .3em;
 }
 [class^="icon-"]:last-child {
@@ -1688,7 +1720,7 @@ input[type="button"] {
   background-image: linear-gradient(#ffffff, #ffffff 15%, #d9d9d9);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d9d9d9', GradientType=0);
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   border-bottom-color: #bbb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1790,7 +1822,16 @@ input[type="button"].full-width {
 .thumbnails {
   margin-left: -20px;
   list-style: none;
+  *zoom: 1;
   zoom: 1;
+}
+.thumbnails:before,
+.thumbnails:after {
+  display: table;
+  content: "";
+}
+.thumbnails:after {
+  clear: both;
 }
 .thumbnails > li {
   float: left;
@@ -1800,7 +1841,7 @@ input[type="button"].full-width {
   display: block;
   padding: 4px;
   line-height: 1;
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1845,10 +1886,24 @@ header h1 {
 footer {
   background: #333333 url('../images/black_denim.jpg') repeat;
   width: 100%;
-  height: 70px;
-  text-align: center;
+  height: 80px;
   color: #ffffff !important;
   padding: 10px 0;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.middle {
+  vertical-align: middle;
+}
+.bottom {
+  vertical-align: bottom;
+}
+.top {
+  vertical-align: top;
 }
 /* #Page Styles
 ================================================== */
