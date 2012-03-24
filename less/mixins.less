@@ -78,6 +78,12 @@
   .size(@size, @size);
 }
 
+// Opacity
+.opacity(@opacity: 100) {
+  opacity: @opacity / 100;
+   filter: e(%("alpha(opacity=%d)", @opacity));
+}
+
 // Placeholder text
 // -------------------------
 .placeholder(@color: @placeholderText) {
@@ -99,7 +105,7 @@
       font-family: Georgia, "Times New Roman", Times, serif;
     }
     .sans-serif() {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: Trebuchet, "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     .monospace() {
       font-family: Menlo, Monaco, "Courier New", monospace;
@@ -230,12 +236,6 @@
 .resizable(@direction: both) {
   resize: @direction; // Options: horizontal, vertical, both
   overflow: auto; // Safari fix
-}
-
-// Opacity
-.opacity(@opacity: 100) {
-  opacity: @opacity / 100;
-   filter: e(%("alpha(opacity=%d)", @opacity));
 }
 
 

@@ -39,7 +39,9 @@
   <!-- Primary Page Layout
   ================================================== -->
   <header>
-    <h1>Mark's Custom Skeleton</h1>
+    <div class="container">
+      <h4>Mark's Custom Skeleton</h4>
+    </div>
   </header>
 
   <div class="container">
@@ -92,6 +94,7 @@
   <h1 class="sectionheader">Variables <small>LESS variables, their values, and usage guidelines</small></h1>
   <div class="row">
     <div class="span8">
+      
       <h3>Hyperlinks</h3>
       <table>
         <tbody>
@@ -109,23 +112,7 @@
           </tr>
         </tbody>
       </table>
-      <h3>Grid system</h3>
-      <table>
-        <tbody>
-          <tr>
-            <td><code>@gridColumns</code></td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td><code>@gridColumnWidth</code></td>
-            <td>60px</td>
-          </tr>
-          <tr>
-            <td><code>@gridGutterWidth</code></td>
-            <td>20px</td>
-          </tr>
-        </tbody>
-      </table>
+     
       <h3>Typography</h3>
       <table>
         <tbody>
@@ -135,14 +122,81 @@
           </tr>
           <tr>
             <td><code>@baseFontFamily</code></td>
-            <td><code>"Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif</code></td>
+            <td colspan="3"><code>Trebuchet, "Helvetica Neue", Helvetica, Arial, sans-serif</code></td>
           </tr>
           <tr>
             <td><code>@baseLineHeight</code></td>
-            <td>21px</td>
+            <td colspan="3">21px</td>
+          </tr>
+          <tr>
+            <td><code>@textColor</code></td>
+            <td width="215">#555</td>
+            <td width="190">Default text color</td>
+            <td><span class="swatch" style="background-color: #555;"></span></td>
           </tr>
         </tbody>
       </table>
+
+      <h3>Forms</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Mixin</th>
+              <th>Parameters</th>
+              <th>Usage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.placeholder()</code></td>
+              <td><code>@color: @placeholderText</code></td>
+              <td>Set the <code>placeholder</code> text color for inputs</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      <h3>Navbar</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Mixin</th>
+                <th>Parameters</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>@navbarHeight</code></td>
+                <td>40px</td>
+                <td class="swatch-col"></td>
+              </tr>
+              <tr>
+                <td><code>@navbarBackground</code></td>
+                <td><code>@black</code></td>
+                <td><span class="swatch" style="background-color: #000;"></span></td>
+              </tr>
+              <tr>
+                <td><code>@navbarBackgroundHighlight</code></td>
+                <td><code>@grayDarker</code></td>
+                <td><span class="swatch" style="background-color: #333;"></span></td>
+              </tr>
+              <tr>
+                <td><code>@navbarText</code></td>
+                <td><code>@grayLight</code></td>
+                <td><span class="swatch" style="background-color: #ccc;"></span></td>
+              </tr>
+              <tr>
+                <td><code>@navbarLinkColor</code></td>
+                <td><code>@grayLight</code></td>
+                <td><span class="swatch" style="background-color: #ccc;"></span></td>
+              </tr>
+              <tr>
+                <td><code>@navbarLinkColorHover</code></td>
+                <td><code>@white</code></td>
+                <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     <div class="span4">
       <h3>Grayscale colors</h3>
@@ -238,6 +292,7 @@
     </div><!-- /span4 -->
   </div><!-- /row -->
   <h2>Included mixins</h2>
+  
   <h3>Utilities</h3>
   <table>
     <thead>
@@ -285,8 +340,9 @@
       </tr>
     </tbody>
   </table>
-  <h3>Forms</h3>
-  <table>
+
+  <h3>Typography</h3>
+  <table class="table table-bordered table-striped">
     <thead>
       <tr>
         <th>Mixin</th>
@@ -296,12 +352,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><code>.placeholder()</code></td>
-        <td><code>@color: @placeholderText</code></td>
-        <td>Set the <code>placeholder</code> text color for inputs</td>
+        <td><code>#font > #family > .serif()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Make an element use a serif font stack</td>
+      </tr>
+      <tr>
+        <td><code>#font > #family > .sans-serif()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Make an element use a sans-serif font stack</td>
+      </tr>
+      <tr>
+        <td><code>#font > #family > .monospace()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Make an element use a monospace font stack</td>
+      </tr>
+      <tr>
+        <td><code>#font > .shorthand()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Easily set font size, weight, and leading</td>
+      </tr>
+      <tr>
+        <td><code>#font > .serif()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Set font family to serif, and control size, weight, and leading</td>
+      </tr>
+      <tr>
+        <td><code>#font > .sans-serif()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Set font family to sans-serif, and control size, weight, and leading</td>
+      </tr>
+      <tr>
+        <td><code>#font > .monospace()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Set font family to monospace, and control size, weight, and leading</td>
       </tr>
     </tbody>
   </table>
+
   <h3>CSS3 properties</h3>
   <table>
     <thead>
@@ -369,6 +456,7 @@
       </tr>
     </tbody>
   </table>
+  
   <h3>Backgrounds and gradients</h3>
   <table>
     <thead>

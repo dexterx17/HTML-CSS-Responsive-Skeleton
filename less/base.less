@@ -6,8 +6,6 @@
 	#Links
 	#Lists
 	#Images
-	#Buttons
-	#Tabs
 	#Forms
 	#Tables
 	#Misc
@@ -44,11 +42,15 @@
 		color: @grayDark;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
- }
+ 	}
 /*  This section of selectors is for absolute positioning the footer on the bottom */
  	html, body { height:100%; }
-	#wrap { min-height:100%; position:relative; padding-bottom:80px; }
+	#wrap { min-height:100%; position:relative; }
 	.ie6 #wrap { height:100%; }
+	#wrap > .container { 
+		padding-bottom:80px; // For footer
+		margin-top:50px; // For header
+	}
 	footer { position:absolute; bottom:0; }
 
  	section { padding-bottom:20px; border-bottom:1px dotted @grayLight; }
@@ -66,10 +68,10 @@
 	h1 { font-size: @baseFontSize + 32; /* 46px */ line-height: 50px; margin-bottom: 14px;
 		small { font-size:28px; }
 	}
-	h2 { font-size: @baseFontSize + 21; /* 35px */ line-height: 40px; margin-bottom: 10px; }
-	h3 { font-size: @baseFontSize + 14; /* 28px */ line-height: 34px; margin-bottom: 8px; color:@gray; }
-	h4 { font-size: @baseFontSize + 7; /* 21px */ line-height: 30px; margin-bottom: 4px; }
-	h5 { font-size: @baseFontSize + 3; /* 17px */ line-height: 24px; }
+	h2 { font-size: @baseFontSize + 21px; /* 35px */ line-height: 40px; margin-bottom: 10px; }
+	h3 { font-size: @baseFontSize + 14px; /* 28px */ line-height: 34px; margin-bottom: 8px; color:@gray; }
+	h4 { font-size: @baseFontSize + 7px; /* 21px */ line-height: 30px; margin-bottom: 4px; }
+	h5 { font-size: @baseFontSize + 1px; /* 15px */ line-height: 21px; font-weight:bold; }
 	h6 { font-size: @baseFontSize; line-height: @baseLineHeight; color:@gray; text-transform:uppercase; }
 	.subheader { color: @gray; }
 	.sectionheader { margin:1.5em 0 1em; line-height:1.2; border-bottom:1px dotted @grayLight; padding-bottom:10px; }
@@ -162,10 +164,8 @@ dd { margin-left: @baseLineHeight / 2; }
 /* #Forms
 ================================================== */
 
-	form {
-		margin-bottom: 20px; }
-	fieldset {
-		margin-bottom: 20px; }
+	form { margin-bottom: 20px; }
+	fieldset { margin-bottom: 20px; }
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -183,19 +183,17 @@ dd { margin-left: @baseLineHeight / 2; }
 		width: 210px;
 		max-width: 100%;
 		display: block;
+		float:none;
 		margin-bottom: 20px;
 		background: @white; }
-	select {
-		padding: 0; }
+	
+	input, textarea { @transition: border linear .2s, box-shadow linear .2s; .transition(@transition); }
 	input[type="text"]:focus,
 	input[type="password"]:focus,
 	input[type="email"]:focus,
-	textarea:focus {
-		border: 1px solid #aaa;
- 		color: @grayDark;
- 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
-		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
-		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea:focus { border: 1px solid #aaa; color: @grayDark; background:lighten(@grayLighter,5%);
+ 		@shadow: inset 0 1px 2px rgba(0,0,0,.2);
+  		.box-shadow(@shadow); }
 	textarea { min-height:60px; overflow:auto; vertical-align:top; resize:vertical; }
 	label,
 	legend {
@@ -210,6 +208,15 @@ dd { margin-left: @baseLineHeight / 2; }
 		font-size: @baseFontSize;
 		color: @gray; }
 
+	// Grid style input sizes
+	input[class*="span"],
+	select[class*="span"],
+	textarea[class*="span"],
+	.uneditable-input {
+		float: none;
+		margin-left: 0;
+	}
+
 /* #Tables
 ================================================== */
 
@@ -220,6 +227,13 @@ dd { margin-left: @baseLineHeight / 2; }
 	td:first-child, th:first-child { padding-left:10px; }
 	th,td { padding: 5px 10px 5px 0px; vertical-align:middle; text-align:left; }
 	caption { background: #ffc; }
+
+	// Grid style table cell sizes
+	table [class*="span"] {
+		float: none;
+		margin-left: 0;
+		display:static;
+	}
 
 
 /* #Misc
@@ -277,6 +291,11 @@ dd { margin-left: @baseLineHeight / 2; }
 
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
 
 
 /* ==|== print styles =======================================================
