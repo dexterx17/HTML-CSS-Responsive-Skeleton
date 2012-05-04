@@ -1,0 +1,115 @@
+// Navigation.less
+// Controls the main navigation of the site
+// -----------------------------------------------------
+
+
+/* menu icon */
+#menu-icon {
+  display: none; /* hide menu icon initially */
+}
+
+#nav-wrap { margin-top: 20px; .clearfix(); }
+
+#nav { .clearfix(); }
+#nav, #nav li { margin: 0; padding: 0; }
+#nav li { list-style:none; float:left; margin-right: 5px; }
+
+/* nav link */
+#nav a { padding: 5px 10px; display: block; color: @linkColor; }
+#nav a:hover, #nav .dropdown:hover { background: @white; color:@linkColor !important; }
+#nav a:hover { .border-radius(); .box-shadow(0 1px 4px rgba(0,0,0,.5)); }
+#nav .dropdown:hover > a { .border-radius(5px 5px 0 0); .box-shadow(0 0 0 0); .box-shadow(0 1px 4px rgba(0,0,0,.5)); }
+
+
+/* nav dropdown */
+#nav ul {
+  background: #fff;
+  position: relative;
+  margin:0;
+  display: none; /* hide dropdown */
+  width: 200px;
+  .box-shadow(0 2px 3px rgba(0,0,0,.5));
+  .border-radius(0 0 5px 5px);
+}
+#nav ul li { float: none; margin: 0; padding: 0; }
+
+#nav li:hover > ul {
+  display: block; /* show dropdown on hover */
+  position:absolute;
+  z-index:10;
+}
+#nav li:hover > ul a:hover { background:@linkColor; color:@white !important; .border-radius(0 0 0 0); .box-shadow(0 0 0 0); }
+#nav li:hover > ul li:last-child a { .border-radius(0 0 5px 5px); }
+
+#nav a { .transition(0.3s); }
+
+
+// MOBILE DEVICES
+// --------------------------------------------------
+@media screen and (max-width: 767px) {
+
+  /* nav-wrap */
+  #nav-wrap { position:relative; /* make it fixed by adding: position: fixed; top:0; */ margin:0; width:100%; z-index:@zindexFixedNavigation; }
+
+  /* menu icon */
+  #menu-icon {
+    color: @white;
+    width: 100%;
+    height: 30px;
+    background: @linkColor url(../images/menu-icon.png) no-repeat 10px center;
+    padding: 8px 10px 0 42px;
+    cursor: pointer;
+    .box-shadow();
+    display: block; /* show menu icon */
+  }
+  #menu-icon:hover { background-color: darken(@linkColor, 15%); }
+  #menu-icon.active { background-color: @linkColor; }
+  
+  /* main nav */
+  #nav {
+    clear: both;
+    position: absolute;
+    top: 38px;
+    width: 100%;
+    padding: 0;
+    background: @linkColor;
+    .box-shadow();
+    display: none; /* visibility will be toggled with jquery */
+  }
+  #nav li { clear: both; float: none; padding:0; margin:0; }
+  #nav li:hover ul { position:relative; }
+
+  #nav a, #nav a:hover {
+    font: inherit;
+    background:@linkColor;
+    display: block;
+    padding: 8px 0;
+    color: @white !important;
+    border: none;
+    .box-shadow(0 0 0 0);
+    .border-radius(0 0 0 0);
+    width:100%;
+  }
+  #nav > li > a, #nav > li > a:hover, #nav .dropdown > a, #nav .dropdown:hover > a { border-top:1px solid darken(@linkColor, 15%); .box-shadow(inset 0 1px 0 rgba(255,255,255,.25)); .border-radius(0 0 0 0); text-indent:20px; }
+
+  /* dropdown */
+  #nav ul {
+    width: auto;
+    position: static;
+    display: block;
+    border: none;
+    background: inherit;
+    .box-shadow(0 0 0 0);
+  }
+  #nav .drop { display:none; }
+  #nav .drop a { background:darken(@linkColor, 15%); text-indent:40px; }
+  #nav li:hover > ul li:last-child a { .border-radius(0 0 0 0); }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  /* ensure #nav is visible on desktop version */
+  #nav { display: block !important; }
+
+}

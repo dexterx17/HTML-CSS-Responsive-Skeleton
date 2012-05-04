@@ -155,48 +155,6 @@
           </tbody>
         </table>
         
-      <h3>Navbar</h3>
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>Mixin</th>
-                <th>Parameters</th>
-                <th>Usage</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>@navbarHeight</code></td>
-                <td>40px</td>
-                <td class="swatch-col"></td>
-              </tr>
-              <tr>
-                <td><code>@navbarBackground</code></td>
-                <td><code>@black</code></td>
-                <td><span class="swatch" style="background-color: #000;"></span></td>
-              </tr>
-              <tr>
-                <td><code>@navbarBackgroundHighlight</code></td>
-                <td><code>@grayDarker</code></td>
-                <td><span class="swatch" style="background-color: #333;"></span></td>
-              </tr>
-              <tr>
-                <td><code>@navbarText</code></td>
-                <td><code>@grayLight</code></td>
-                <td><span class="swatch" style="background-color: #ccc;"></span></td>
-              </tr>
-              <tr>
-                <td><code>@navbarLinkColor</code></td>
-                <td><code>@grayLight</code></td>
-                <td><span class="swatch" style="background-color: #ccc;"></span></td>
-              </tr>
-              <tr>
-                <td><code>@navbarLinkColorHover</code></td>
-                <td><code>@white</code></td>
-                <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td>
-              </tr>
-            </tbody>
-          </table>
     </div>
     <div class="span4">
       <h3>Grayscale colors</h3>
@@ -597,9 +555,25 @@
     <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
   <script src="js/tabs.js"></script>
   <script src="js/tooltip.js"></script>
+  <script src="js/collapse.js"></script>
   <script type="text/javascript">
     $(function(){
       $('[rel=tooltip]').tooltip();
+    });
+    $(function(){
+      $(".collapse").collapse()
+    });
+
+    jQuery(document).ready(function($){
+
+      /* prepend menu icon */
+      $('#nav-wrap').prepend('<div id="menu-icon">Menu</div>');
+      
+      /* toggle nav */
+      $("#menu-icon").on("click", function(){
+        $("#nav").slideToggle();
+        $(this).toggleClass("active");
+      });
     });
   </script>
 
