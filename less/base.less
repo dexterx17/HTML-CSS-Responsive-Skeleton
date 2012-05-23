@@ -180,12 +180,13 @@ dd { margin-left: @baseLineHeight / 2; }
 		font: @baseFontSize @baseFontFamily;
 		color: @gray;
 		margin: 0;
-		width: 210px;
+		width: 220px;
 		max-width: 100%;
 		display: block;
 		float:none;
 		margin-bottom: 20px;
-		background: @white; }
+		background: @white;
+		.box-sizing(border-box); }
 	
 	input, textarea { @transition: border linear .2s, box-shadow linear .2s; .transition(@transition); }
 	input[type="text"]:focus,
@@ -200,7 +201,8 @@ dd { margin-left: @baseLineHeight / 2; }
 		display: block;
 		font-weight: bold;
 		font-size: @baseFontSize;  }
-	select { width: 220px; }
+	select { width: 220px; background:url(../images/dropdown-arrow.png) no-repeat right 0; -webkit-appearance:none; }
+	select:hover { background:url(../images/dropdown-arrow.png) no-repeat right -21px; }
 	input[type="checkbox"] { display: inline; }
 	label span,
 	legend span {

@@ -440,12 +440,15 @@ select {
   font: 14px Trebuchet, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #999999;
   margin: 0;
-  width: 210px;
+  width: 220px;
   max-width: 100%;
   display: block;
   float: none;
   margin-bottom: 20px;
   background: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 input,
 textarea {
@@ -480,6 +483,11 @@ legend {
 }
 select {
   width: 220px;
+  background: url(../images/dropdown-arrow.png) no-repeat right 0;
+  -webkit-appearance: none;
+}
+select:hover {
+  background: url(../images/dropdown-arrow.png) no-repeat right -21px;
 }
 input[type="checkbox"] {
   display: inline;
@@ -1998,7 +2006,7 @@ input[type="submit"].btn.small {
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
-#nav a {
+#nav .drop a {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
