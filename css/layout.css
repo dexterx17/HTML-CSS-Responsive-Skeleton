@@ -1706,16 +1706,16 @@ a.btn {
   color: rgba(255, 255, 255, 0.75);
 }
 .btn-primary {
-  background-color: #6ac144;
-  background-image: -moz-linear-gradient(top, #7bc144, #51c144);
-  background-image: -ms-linear-gradient(top, #7bc144, #51c144);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7bc144), to(#51c144));
-  background-image: -webkit-linear-gradient(top, #7bc144, #51c144);
-  background-image: -o-linear-gradient(top, #7bc144, #51c144);
-  background-image: linear-gradient(top, #7bc144, #51c144);
+  background-color: #8bc95b;
+  background-image: -moz-linear-gradient(top, #96ce6a, #7bc144);
+  background-image: -ms-linear-gradient(top, #96ce6a, #7bc144);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#96ce6a), to(#7bc144));
+  background-image: -webkit-linear-gradient(top, #96ce6a, #7bc144);
+  background-image: -o-linear-gradient(top, #96ce6a, #7bc144);
+  background-image: linear-gradient(top, #96ce6a, #7bc144);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7bc144', endColorstr='#51c144', GradientType=0);
-  border-color: #51c144 #51c144 #388b2e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96ce6a', endColorstr='#7bc144', GradientType=0);
+  border-color: #7bc144 #7bc144 #578b2e;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -1724,11 +1724,11 @@ a.btn {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #51c144;
+  background-color: #7bc144;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #409e34 \9;
+  background-color: #639e34 \9;
 }
 button.btn,
 input[type="submit"].btn {
